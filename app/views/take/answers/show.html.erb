@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Question:</b>
+  <%= @answer.question_id %>
+</p>
+
+<p>
+  <b>Sequence:</b>
+  <%= @answer.sequence %>
+</p>
+
+<p>
+  <b>Short name:</b>
+  <%= @answer.short_name %>
+</p>
+
+<p>
+  <b>Answer text:</b>
+  <%= @answer.answer_text %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @answer.value %>
+</p>
+
+<p>
+  <b>Requires other:</b>
+  <%= @answer.requires_other %>
+</p>
+
+<p>
+  <b>Other question:</b>
+  <%= @answer.other_question %>
+</p>
+
+<p>
+  <b>Text eval:</b>
+  <%= @answer.text_eval %>
+</p>
+
+<p>
+  <b>Key:</b>
+  <%= @answer.key %>
+</p>
+
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>

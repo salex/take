@@ -1,0 +1,25 @@
+<fieldset class="f-left col-6">
+  <legend>Instructions</legend>
+  <div class="box">
+    <p>  This is just an example of how an assessment would be displayed.</p> 
+    <p><span class="annotate">If there were multiple assessments, this area would show the status in some form.</span>
+    </p>  
+      <ul>
+        <li><%=check_box("one",nil)%>Section 1</li>
+        <li><%=check_box("one",nil)%>Section 2</li>
+        <li><%=check_box("one",nil)%>Section 3</li>
+      </ul>
+  </div>
+</fieldset>
+<fieldset class="f-left col-24">
+  <legend>Section - <%=@assessor["category"]%></legend>
+  <%=form_tag post_assessor_path(@assessor), :id => "assessarea", :name => "assessarea", :"data-behavior" => "validateRequired" %>
+  <%= format_assessment_hash(@hash,@post)%>
+  
+
+      <input type="submit" name="submit" value="Continue" />
+    </form>
+</fieldset>
+<div class="f-clear"></div>
+
+<%= session.inspect %>

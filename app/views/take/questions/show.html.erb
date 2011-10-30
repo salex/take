@@ -1,0 +1,96 @@
+<fieldset class="show-list">
+	<legend>Question</legend>
+	<table class="f-left p50">
+  	<tr>
+  	  <th>Sequence:</th>
+  	  <td><%= @question.sequence %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Question:</th>
+  	  <td><%= @question.question_text %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Shortname:</th>
+  	  <td><%= @question.short_name %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Answer type:</th>
+  	  <td><%= @question.answer_tag %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Display type:</th>
+  	  <td><%= @question.type_display%></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Score method:</th>
+  	  <td><%= @question.score_method %></td>
+  	</tr>
+  </table>
+  	<table class="f-right p50">
+
+  	<tr>
+  	  <th>Weight:</th>
+  	  <td><%= @question.weight %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Critical:</th>
+  	  <td><%= @question.critical %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Minimum value:</th>
+  	  <td><%= @question.min_critical_value %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>key:</th>
+  	  <td><%= @question.key %></td>
+  	</tr>
+	</tr>
+		<tr>
+	  <th>Assmnt Status:</th>
+	  <td><%#= @question.status %><%#= @question.assessor_count%></td>
+	</tr>
+
+	</table>
+</fieldset>
+
+<div class="actions">
+	<span class="crud">
+  	<%= link_to 'Edit', edit_question_path(@question), :class => "edit-button"  %> 
+	</span>
+	<span class="f-right breadcrumbs">
+  	<%= link_to 'Assessments', assessments_path, :class => "breadcrumb" %>
+  	<%= link_to 'Assessment', assessment_path(@question.assessment_id), :class => "breadcrumb" %>
+	</span>
+	
+</div>
+
+<fieldset class="relations">
+  <legend>Answers  	
+    <% if @question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+      <ul>
+      <% @question.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+    
+    <span class="crud">
+      <%= link_to 'Edit/Add Answers', edit_answers_question_path(params[:id]), :"data-remote" => true %>
+      
+  	</span>
+  </legend>
+	<div id="related">
+	  <%= render :partial => 'answers', :locals => {:question => @question} %>
+	</div>
+</fieldset>

@@ -1,0 +1,90 @@
+<fieldset class="show-list">
+	<legend>Assessment</legend>
+	<table class="f-left p50">
+  	<tr>
+  	  <th>Name:</th>
+  	  <td><%= @assessment.name %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Description:</th>
+  	  <td><%= content_tag :textarea , @assessment.description, :cols => 40 %></td>
+  	</tr>
+  	<tr>
+  	  <th>Instructions:</th>
+  	  <td><%= content_tag :textarea , @assessment.instructions, :cols => 40 %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Status:</th>
+  	  <td><%= @assessment.status %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Category:</th>
+  	  <td><%= @assessment.category %></td>
+  	</tr>
+  </table>
+  <table class="f-right p50">
+	
+  	<tr>
+  	  <th>Answer type:</th>
+  	  <td><%= @assessment.default_answer_tag %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Display type:</th>
+  	  <td><%= @assessment.default_display %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Max raw:</th>
+  	  <td><%= @assessment.max_raw %></td>
+  	</tr>
+
+  	<tr>
+  	  <th>Max weighted:</th>
+  	  <td><%= @assessment.max_weighted %></td>
+  	</tr>
+  	<tr>
+  	  <th>xml Key:</th>
+  	  <td><%= @assessment.key %></td>
+  	</tr>
+
+	</table>
+</fieldset>
+
+<div class="actions">
+	<span class="crud">
+  	<%= link_to 'Edit', edit_assessment_path(@assessment), :class => "edit-button" %> |
+	</span>
+	<span class="route">
+	  <%= link_to 'Test Assessment', display_assessment_path(@assessment), :class => "link-button" %>
+  	
+	</span>
+	<span class="f-right">
+	  
+  	<%= link_to 'Assessments', assessments_path, :class => "breadcrumb" %>
+	</span>
+	
+</div>
+
+<fieldset class="relations">
+  <legend>Questions
+    <span class="crud">
+  	  <%if params[:assessment_id] %>
+      <%= link_to 'New Question', new_assessment_question_path(params[:assessment_id]), :class => "new-button" %>
+      <%else%>
+      <%= link_to 'New Question', new_assessment_question_path(params[:id]), :class => "new-button" %>
+      <%end%>
+  	</span>
+  </legend>
+	<div id="related">
+	  <%= render :partial => 'questions', :locals => {:assessment => @assessment }%>
+	</div>
+	
+	<hr />
+	<% @hash = Take::Assessment.publish(@assessment.id) %>
+	<%= format_assessment_hash(@hash,@post)%>
+  
+</fieldset>

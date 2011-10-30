@@ -1,0 +1,37 @@
+<div class="index-list">
+
+  <table>
+    <tr class="list-header">
+        <th>Sequence</th>
+        <th>Question</th>
+        <th>Shortname</th>
+        <th>Type</th>
+        <th>Display</th>
+        <th>Score</th>
+        <th>Weight</th>
+        <th>Critical</th>
+        <th>Actions</th>
+    </tr>
+<% alt = true%>
+  <% @assessment.questions.each do |question| %>
+  <% alt = !alt %>
+  
+    <tr <%=raw alt ? "class=\"alt\"" : ""%>>
+        <td><%= question.sequence %></td>
+        <td><%=raw truncateText(question.question_text,25) %></td>
+        <td><%= question.short_name %></td>
+        <td><%= question.answer_tag %></td>
+        <td><%= question.type_display %></td>
+        <td><%= question.score_method %></td>
+        <td><%= question.weight %></td>
+        <td><%= question.critical %></td>
+        <td>
+        <%= link_to 'Show', question_path(question), :class => "show-button" %>
+        <%= link_to 'Edit', edit_question_path(question), :class => "edit-button"  %>
+        <%= link_to 'Destroy', question_path(question), :confirm => 'Are you sure?', :method => :delete , :class => "destroy-button"  %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+

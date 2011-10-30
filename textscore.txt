@@ -1,0 +1,32 @@
+2 char section delimiters
+:: value  (default minus for numeric)
++- delta value(s)
+++ partial credit  - added 
+-- negative partial credit - deduction
+exact matches score = answer value
+
+5 point
+3.1415+-.0005::1+-.001::4
+
+exact delta1 delta2
+
+score = max(exact, delta..) >= 0
+
+if 3.1415 => 5 - 0 = 5
+if 3.1410 => 5 - 1 = 4
+if 3.1420 => 5 - 1 = 4
+if 3.1405 => 5 - 4 = 1
+if 3.1425 => 5 - 4 = 1
+
+10 points
+quick%brown&lazy&(fox|back)>>+quick::2&brown::2&lazy::2&fox::1%back::1>>-dog::1
+
+exact ++ partial plus -- partial minus
+
+
+score = max( (exact - partial minus), (partial plus - partial minus)) >= 0
+quick brown lazy fox|back => 10
+quick dog lazy fox => 2 - 1 + 2 + 1 = 4
+quick brown lazy => 2 + 2 + 2 = 6
+
+etc

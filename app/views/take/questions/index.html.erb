@@ -1,0 +1,47 @@
+<h1>Listing questions</h1>
+
+<table>
+  <tr>
+    <th>Assessment</th>
+    <th>Sequence</th>
+    <th>Short name</th>
+    <th>Question text</th>
+    <th>Instructions</th>
+    <th>Answer tag</th>
+    <th>Display</th>
+    <th>Group header</th>
+    <th>Weight</th>
+    <th>Critical</th>
+    <th>Min critical value</th>
+    <th>Score method</th>
+    <th>Key</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @questions.each do |question| %>
+  <tr>
+    <td><%= question.assessment_id %></td>
+    <td><%= question.sequence %></td>
+    <td><%= question.short_name %></td>
+    <td><%= question.question_text %></td>
+    <td><%= question.instructions %></td>
+    <td><%= question.answer_tag %></td>
+    <td><%= question.type_display%></td>
+    <td><%= question.group_header %></td>
+    <td><%= question.weight %></td>
+    <td><%= question.critical %></td>
+    <td><%= question.min_critical_value %></td>
+    <td><%= question.score_method %></td>
+    <td><%= question.key %></td>
+    <td><%= link_to 'Show', question, :class => "show-button" %></td>
+    <td><%= link_to 'Edit', edit_question_path(question), :class => "edit-button" %></td>
+    <td><%= link_to 'Destroy', question, confirm: 'Are you sure?', method: :delete, :class => "destroy-button" %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Question', new_question_path %>

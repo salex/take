@@ -1,0 +1,28 @@
+<div class="index-list">
+
+  <table>
+    <tr class="list-header">
+        <th>Sequence</th>
+        <th>Answer</th>
+        <th>Shortname</th>
+        <th>Value</th>
+        <th>Other Question</th>
+        <th>Eval</th>
+    </tr>
+    <% alt = true%>
+    <% question.answers.each do |answer| %>
+      <% alt = !alt %>
+
+    <tr <%=raw alt ? "class=\"alt\"" : ""%>>
+        <td><%= answer.sequence %></td>
+        <td><%= raw truncateText(answer.answer_text,35,"middle") %></td>
+        <td><%= answer.short_name %></td>
+        <td><%= answer.value %></td>
+        <td><%= answer.requires_other == true ? check_box_tag( "ro",0,true) :  check_box_tag( "ro", 1)%>
+        <%= raw truncateText(answer.other_question,20,"middle") %></td>
+        <td><%= answer.text_eval %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+

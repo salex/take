@@ -1,0 +1,86 @@
+<%= form_for([@assessment,@question]) do |f| %>
+<fieldset class="show-list">
+	<legend><%= params[:action] == "edit" ? "Edit" : "New" %> Question</legend>
+
+  <% if @question.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+    <ul>
+    <% @question.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+	<table class="f-left">
+    <tr class="field">
+      <th><%= f.label :sequence %></th>
+      <td><%= f.text_field :sequence %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :question_text %></th>
+      <td><%= f.text_area :question_text , :rows => 3 %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :instructions %></th>
+      <td><%= f.text_area :instructions , :rows => 3 %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :short_name %></th>
+      <td><%= f.text_field :short_name %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :group_header %></th>
+      <td><%= f.text_field :group_header %></td>
+    </tr>
+    
+  </table>
+	<table class="f-left">
+	  <tr class="field">
+      <th><%= f.label :answer_tag %></th>
+      <td><%= f.select :answer_tag, answer_type_options(@question.answer_tag) %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :type_display %></th>
+      <td><%= f.select :type_display, display_type_options(@question.type_display) %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :score_method %></th>
+      <td><%= f.select :score_method, score_method_options(@question.score_method) %></td>
+    </tr>
+    
+    <tr class="field">
+      <th><%= f.label :weight %></th>
+      <td><%= f.text_field :weight %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :critical %></th>
+      <td><%= f.check_box :critical %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :min_critical_value %></th>
+      <td><%= f.text_field :min_critical_value %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :key %></th>
+      <td><%= f.text_field :key %></td>
+    </tr>
+    	  
+    
+    </table>
+    <div class="f-clear"></div>
+  <div class="actions">
+    <%= f.submit %>
+    <span class="f-right breadcrumbs">
+      <% if !@question.id.nil? %>
+      <%= link_to 'Show', @question, :class => "show-button" %>
+      <% end %>
+      
+    	<%= link_to 'Assessments', assessments_path, :class => "breadcrumb" %>
+    	<%= link_to 'Assessment', assessment_path(@question.assessment_id), :class => "breadcrumb" %>
+  	</span>
+  	
+  </div>
+</fieldset>
+      
+<% end %>

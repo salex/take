@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  assessment_id: 1
+  sequence: 1
+  short_name: MyString
+  question_text: MyText
+  instructions: MyText
+  answer_tag: MyString
+  display: MyString
+  group_header: MyString
+  weight: 1.5
+  critical: false
+  min_critical_value: 1.5
+  score_method: MyString
+  key: MyString
+
+two:
+  assessment_id: 1
+  sequence: 1
+  short_name: MyString
+  question_text: MyText
+  instructions: MyText
+  answer_tag: MyString
+  display: MyString
+  group_header: MyString
+  weight: 1.5
+  critical: false
+  min_critical_value: 1.5
+  score_method: MyString
+  key: MyString

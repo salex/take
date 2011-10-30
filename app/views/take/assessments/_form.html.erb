@@ -1,0 +1,68 @@
+<%= form_for(@assessment) do |f| %>
+<fieldset class="show-list">
+	<legend><%= params[:action] == "edit" ? "Edit" : "New" %> Assessment</legend>
+
+  <% if @assessment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assessment.errors.count, "error") %> prohibited this assessment from being saved:</h2>
+
+      <ul>
+      <% @assessment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <tr class="field">
+      <th><%= f.label :name %></th>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :description %></th>
+      <td><%= f.text_area :description, :rows => 4 %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :status %></th>
+      <td><%= f.select :status, status_options(@assessment.status) %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :category %></th>
+      <td><%= f.text_field :category %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :answer_type %></th>
+      <td><%= f.select :default_answer_tag, answer_type_options(@assessment.default_answer_tag) %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :display_type %></th>
+      <td><%= f.select :default_display, display_type_options(@assessment.default_display,true) %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :max_raw %></th>
+      <td><%= f.text_field :max_raw %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :max_weighted %></th>
+      <td><%= f.text_field :max_weighted %></td>
+    </tr>
+    <tr class="field">
+      <th><%= f.label :insructions %></th>
+      <td><%= f.text_area :instructions, :rows => 4 %></td>
+    </tr>
+    
+  </table>
+  <div class="actions">
+    <%= f.submit %>
+    <span class="f-right breadcrumbs">
+      <% if !@assessment.id.nil? %>
+      <%= link_to 'Show (Cancel)', @assessment, :class => "show-button" %>
+      <% end %>
+      
+    	<%= link_to 'Assessments', assessments_path, :class => "breadcrumb" %>
+  	</span>
+    
+  </div>
+  </fieldset>
+<% end %>
