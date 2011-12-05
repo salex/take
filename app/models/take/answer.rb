@@ -8,7 +8,9 @@ module Take
     private
 
     def updateMax
-      Assessment.computeMax(self.question.assessment.id) if is_dirty?
+      if self.question
+        Assessment.computeMax(self.question.assessment.id) if is_dirty?
+      end
     end
 
     def is_dirty?

@@ -1,0 +1,565 @@
+[
+{"answer":
+{"answer_text":"First Name","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":1,"other_question":"","question_id":1,"requires_other":false,"sequence":1,"short_name":"fname","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0101"}},
+{"answer":
+{"answer_text":"MI","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":2,"other_question":"","question_id":1,"requires_other":false,"sequence":2,"short_name":"mi","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0102"}},
+{"answer":
+{"answer_text":"Last Name","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":3,"other_question":"","question_id":1,"requires_other":false,"sequence":3,"short_name":"lname","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0103"}},
+{"answer":
+{"answer_text":"Address","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":4,"other_question":"","question_id":1,"requires_other":false,"sequence":4,"short_name":"address","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0104"}},
+{"answer":
+{"answer_text":"City","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":5,"other_question":"","question_id":1,"requires_other":false,"sequence":5,"short_name":"city","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0105"}},
+{"answer":
+{"answer_text":"State","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":6,"other_question":"","question_id":1,"requires_other":false,"sequence":6,"short_name":"st","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0106"}},
+{"answer":
+{"answer_text":"Zip","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":7,"other_question":"","question_id":1,"requires_other":false,"sequence":7,"short_name":"zip","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0107"}},
+{"answer":
+{"answer_text":"County","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":8,"other_question":"","question_id":1,"requires_other":false,"sequence":8,"short_name":"county","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0108"}},
+{"answer":
+{"answer_text":"Prim Phone","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":9,"other_question":"","question_id":1,"requires_other":false,"sequence":9,"short_name":"phone1","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0109"}},
+{"answer":
+{"answer_text":"Sec Phone","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":10,"other_question":"","question_id":1,"requires_other":false,"sequence":10,"short_name":"phone2","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0110"}},
+{"answer":
+{"answer_text":"eMail","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":11,"other_question":"","question_id":1,"requires_other":false,"sequence":11,"short_name":"email","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0111"}},
+{"answer":
+{"answer_text":"Month of Birth","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":12,"other_question":"","question_id":1,"requires_other":false,"sequence":12,"short_name":"mob","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0112"}},
+{"answer":
+{"answer_text":"Day of Birth","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":13,"other_question":"","question_id":1,"requires_other":false,"sequence":13,"short_name":"dob","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"a0113"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":14,"other_question":"What was your job?","question_id":2,"requires_other":true,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g0101"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":15,"other_question":"","question_id":2,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g0102"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":16,"other_question":"Enter name and relation?","question_id":3,"requires_other":true,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g0201"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":17,"other_question":"","question_id":3,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g0202"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":18,"other_question":"","question_id":4,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g0301"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":19,"other_question":"","question_id":4,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g0302"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":20,"other_question":"","question_id":5,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g0401"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:15Z","id":21,"other_question":"","question_id":5,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g0402"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":22,"other_question":"","question_id":6,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g0501"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":23,"other_question":"","question_id":6,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g0502"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":24,"other_question":"","question_id":7,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g0601"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":25,"other_question":"Enter work permit #","question_id":7,"requires_other":true,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g0602"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":26,"other_question":"","question_id":8,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g0701"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":27,"other_question":"","question_id":8,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g0702"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":28,"other_question":"","question_id":9,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g0801"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":29,"other_question":"","question_id":9,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g0802"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":30,"other_question":"","question_id":10,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g0901"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":31,"other_question":"","question_id":10,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g0902"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":32,"other_question":"","question_id":11,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g1001"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":33,"other_question":"","question_id":11,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g1002"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":34,"other_question":"","question_id":12,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":1.0,"key":"g1101"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":35,"other_question":"","question_id":12,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:23Z","value":0.0,"key":"g1102"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":36,"other_question":"","question_id":13,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"g1201"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":37,"other_question":"","question_id":13,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"g1202"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":38,"other_question":"","question_id":14,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"g1301"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":39,"other_question":"","question_id":14,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"g1302"}},
+{"answer":
+{"answer_text":"I did not complete high school and do not have a diploma or GED.","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":40,"other_question":"","question_id":15,"requires_other":false,"sequence":1,"short_name":"No Diploma/GED","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"e0101"}},
+{"answer":
+{"answer_text":"I did not complete high school but completed a non-diploma trade school.","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":41,"other_question":"","question_id":15,"requires_other":false,"sequence":2,"short_name":"Trade School","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"e0102"}},
+{"answer":
+{"answer_text":"I completed high school but did not graduate (obtained certificate).","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":42,"other_question":"","question_id":15,"requires_other":false,"sequence":3,"short_name":"Certificate","updated_at":"2010-12-20T23:15:24Z","value":2.0,"key":"e0103"}},
+{"answer":
+{"answer_text":"I completed high school through a GED program.","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":43,"other_question":"","question_id":15,"requires_other":false,"sequence":4,"short_name":"GED","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"e0104"}},
+{"answer":
+{"answer_text":"I completed high school and received a diploma.","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":44,"other_question":"Enter name of high school, city and state","question_id":15,"requires_other":true,"sequence":5,"short_name":"HS Diploma","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"e0105"}},
+{"answer":
+{"answer_text":"I completed high school and received a diploma with a Career Tech Endorsement.","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":45,"other_question":"Enter name of high school, city and state","question_id":15,"requires_other":true,"sequence":6,"short_name":"HS Diploma/CT","updated_at":"2010-12-20T23:15:24Z","value":5.0,"key":"e0106"}},
+{"answer":
+{"answer_text":"I completed a military technical school.","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":46,"other_question":"Enter Technical Area","question_id":15,"requires_other":true,"sequence":7,"short_name":"Military Tech","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"e0107"}},
+{"answer":
+{"answer_text":"I attended an associate\u2019s degree granting technical school/community college b","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":47,"other_question":"","question_id":15,"requires_other":false,"sequence":8,"short_name":"Some Assoc","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"e0108"}},
+{"answer":
+{"answer_text":"I received an associate\u2019s degree from a technical school/community college.","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":48,"other_question":"Enter degree, institute, and year completed","question_id":15,"requires_other":true,"sequence":9,"short_name":"Assoc Degree","updated_at":"2010-12-20T23:15:24Z","value":5.0,"key":"e0109"}},
+{"answer":
+{"answer_text":"I attended an accredited, degree-granting college/university but did not receive","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":49,"other_question":"","question_id":15,"requires_other":false,"sequence":10,"short_name":"Some College","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"e0110"}},
+{"answer":
+{"answer_text":"I received a BS/BA degree from an accredited, degree-granting college/university","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":50,"other_question":"Enter degree, institute, and year completed","question_id":15,"requires_other":true,"sequence":11,"short_name":"BS/BA Degree","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"e0111"}},
+{"answer":
+{"answer_text":"I attended an advanced degree program (MS/MA/PhD) but did receive a degree.","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":51,"other_question":"","question_id":15,"requires_other":false,"sequence":12,"short_name":"Some Advanced","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"e0112"}},
+{"answer":
+{"answer_text":"I received an MS/MA/PhD degree from an accredited, degree-granting college/unive","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":52,"other_question":"Enter degree, institute, and year completed","question_id":15,"requires_other":true,"sequence":13,"short_name":"MS/MA+ Degree","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"e0113"}},
+{"answer":
+{"answer_text":"Company","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":53,"other_question":"","question_id":16,"requires_other":false,"sequence":1,"short_name":"Company","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0101"}},
+{"answer":
+{"answer_text":"City State","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":54,"other_question":"","question_id":16,"requires_other":false,"sequence":2,"short_name":"City","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0102"}},
+{"answer":
+{"answer_text":"Job title/description","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":55,"other_question":"","question_id":16,"requires_other":false,"sequence":3,"short_name":"Title","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0103"}},
+{"answer":
+{"answer_text":"From (YY/MM)","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":56,"other_question":"","question_id":16,"requires_other":false,"sequence":4,"short_name":"From Date","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0104"}},
+{"answer":
+{"answer_text":"To (YY/MM)","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":57,"other_question":"","question_id":16,"requires_other":false,"sequence":5,"short_name":"To Date","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0105"}},
+{"answer":
+{"answer_text":"Start Wage/Salary","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":58,"other_question":"","question_id":16,"requires_other":false,"sequence":6,"short_name":"Start Wage","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0106"}},
+{"answer":
+{"answer_text":"End Wage/Salary","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":59,"other_question":"","question_id":16,"requires_other":false,"sequence":7,"short_name":"End Wage","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0107"}},
+{"answer":
+{"answer_text":"Reason for leaving","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":60,"other_question":"","question_id":16,"requires_other":false,"sequence":8,"short_name":"Leaving","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0108"}},
+{"answer":
+{"answer_text":"Company","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":61,"other_question":"","question_id":17,"requires_other":false,"sequence":1,"short_name":"Company","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0201"}},
+{"answer":
+{"answer_text":"City State","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":62,"other_question":"","question_id":17,"requires_other":false,"sequence":2,"short_name":"City","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0202"}},
+{"answer":
+{"answer_text":"Job title/description","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":63,"other_question":"","question_id":17,"requires_other":false,"sequence":3,"short_name":"Title","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0203"}},
+{"answer":
+{"answer_text":"From (YY/MM)","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":64,"other_question":"","question_id":17,"requires_other":false,"sequence":4,"short_name":"From Date","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0204"}},
+{"answer":
+{"answer_text":"To (YY/MM)","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":65,"other_question":"","question_id":17,"requires_other":false,"sequence":5,"short_name":"To Date","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0205"}},
+{"answer":
+{"answer_text":"Start Wage/Salary","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":66,"other_question":"","question_id":17,"requires_other":false,"sequence":6,"short_name":"Start Wage","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0206"}},
+{"answer":
+{"answer_text":"End Wage/Salary","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":67,"other_question":"","question_id":17,"requires_other":false,"sequence":7,"short_name":"End Wage","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0207"}},
+{"answer":
+{"answer_text":"Reason for leaving","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":68,"other_question":"","question_id":17,"requires_other":false,"sequence":8,"short_name":"Leaving","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0208"}},
+{"answer":
+{"answer_text":"Company","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":69,"other_question":"","question_id":18,"requires_other":false,"sequence":1,"short_name":"Company","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0301"}},
+{"answer":
+{"answer_text":"City State","text_eval":"","created_at":"2010-12-04T11:21:16Z","id":70,"other_question":"","question_id":18,"requires_other":false,"sequence":2,"short_name":"City","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0302"}},
+{"answer":
+{"answer_text":"Job title/description","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":71,"other_question":"","question_id":18,"requires_other":false,"sequence":3,"short_name":"Title","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0303"}},
+{"answer":
+{"answer_text":"From (YY/MM)","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":72,"other_question":"","question_id":18,"requires_other":false,"sequence":4,"short_name":"From Date","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0304"}},
+{"answer":
+{"answer_text":"To (YY/MM)","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":73,"other_question":"","question_id":18,"requires_other":false,"sequence":5,"short_name":"To Date","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0305"}},
+{"answer":
+{"answer_text":"Start Wage/Salary","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":74,"other_question":"","question_id":18,"requires_other":false,"sequence":6,"short_name":"Start Wage","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0306"}},
+{"answer":
+{"answer_text":"End Wage/Salary","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":75,"other_question":"","question_id":18,"requires_other":false,"sequence":7,"short_name":"End Wage","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0307"}},
+{"answer":
+{"answer_text":"Reason for leaving","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":76,"other_question":"","question_id":18,"requires_other":false,"sequence":8,"short_name":"Leaving","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0308"}},
+{"answer":
+{"answer_text":"","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":77,"other_question":"","question_id":19,"requires_other":false,"sequence":1,"short_name":"OtherExp","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"w0401"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":78,"other_question":"","question_id":20,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"s0101"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":79,"other_question":"","question_id":20,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"s0102"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":80,"other_question":"","question_id":20,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":2.0,"key":"s0103"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":81,"other_question":"","question_id":20,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"s0104"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":82,"other_question":"","question_id":20,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"s0105"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":83,"other_question":"","question_id":21,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"s0201"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":84,"other_question":"","question_id":21,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"s0202"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":85,"other_question":"","question_id":21,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":2.0,"key":"s0203"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":86,"other_question":"","question_id":21,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"s0204"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":87,"other_question":"","question_id":21,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"s0205"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":88,"other_question":"","question_id":22,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"s0301"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":89,"other_question":"","question_id":22,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"s0302"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":90,"other_question":"","question_id":22,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":2.0,"key":"s0303"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":91,"other_question":"","question_id":22,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"s0304"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":92,"other_question":"","question_id":22,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"s0305"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":93,"other_question":"","question_id":23,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"s0401"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":94,"other_question":"","question_id":23,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"s0402"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":95,"other_question":"","question_id":23,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":2.0,"key":"s0403"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":96,"other_question":"","question_id":23,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"s0404"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":97,"other_question":"","question_id":23,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"s0405"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":98,"other_question":"","question_id":24,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"s0501"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":99,"other_question":"","question_id":24,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"s0502"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":100,"other_question":"","question_id":24,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":2.0,"key":"s0503"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":101,"other_question":"","question_id":24,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"s0504"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":102,"other_question":"","question_id":24,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"s0505"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":103,"other_question":"","question_id":25,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"s0601"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":104,"other_question":"","question_id":25,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"s0602"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:17Z","id":105,"other_question":"","question_id":25,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":2.0,"key":"s0603"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":106,"other_question":"","question_id":25,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"s0604"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":107,"other_question":"","question_id":25,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"s0605"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":108,"other_question":"","question_id":26,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"s0701"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":109,"other_question":"","question_id":26,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"s0702"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":110,"other_question":"","question_id":26,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":2.0,"key":"s0703"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":111,"other_question":"","question_id":26,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"s0704"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":112,"other_question":"","question_id":26,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"s0705"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":113,"other_question":"","question_id":27,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"s0801"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":114,"other_question":"","question_id":27,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"s0802"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":115,"other_question":"","question_id":27,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":2.0,"key":"s0803"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":116,"other_question":"","question_id":27,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"s0804"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":117,"other_question":"","question_id":27,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"s0805"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":118,"other_question":"","question_id":28,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":0.0,"key":"s0901"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":119,"other_question":"","question_id":28,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":1.0,"key":"s0902"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":120,"other_question":"","question_id":28,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":2.0,"key":"s0903"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":121,"other_question":"","question_id":28,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":3.0,"key":"s0904"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":122,"other_question":"","question_id":28,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:24Z","value":4.0,"key":"s0905"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":123,"other_question":"","question_id":29,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":0.0,"key":"s1001"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":124,"other_question":"","question_id":29,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"s1002"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":125,"other_question":"","question_id":29,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"s1003"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":126,"other_question":"","question_id":29,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"s1004"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":127,"other_question":"","question_id":29,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":4.0,"key":"s1005"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":128,"other_question":"","question_id":30,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":0.0,"key":"s1101"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":129,"other_question":"","question_id":30,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"s1102"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:18Z","id":130,"other_question":"","question_id":30,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"s1103"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":131,"other_question":"","question_id":30,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"s1104"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":132,"other_question":"","question_id":30,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":4.0,"key":"s1105"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":133,"other_question":"","question_id":31,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":0.0,"key":"s1201"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":134,"other_question":"","question_id":31,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"s1202"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":135,"other_question":"","question_id":31,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"s1203"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":136,"other_question":"","question_id":31,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"s1204"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":137,"other_question":"","question_id":31,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":4.0,"key":"s1205"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":138,"other_question":"","question_id":32,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":0.0,"key":"s1301"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":139,"other_question":"","question_id":32,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"s1302"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":140,"other_question":"","question_id":32,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"s1303"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":141,"other_question":"","question_id":32,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"s1304"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":142,"other_question":"","question_id":32,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":4.0,"key":"s1305"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":143,"other_question":"","question_id":33,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":0.0,"key":"s1401"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":144,"other_question":"","question_id":33,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"s1402"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":145,"other_question":"","question_id":33,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"s1403"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":146,"other_question":"","question_id":33,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"s1404"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":147,"other_question":"","question_id":33,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":4.0,"key":"s1405"}},
+{"answer":
+{"answer_text":"0","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":148,"other_question":"","question_id":34,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":0.0,"key":"s1501"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":149,"other_question":"","question_id":34,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"s1502"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:19Z","id":150,"other_question":"","question_id":34,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"s1503"}},
+{"answer":
+{"answer_text":"6","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":151,"other_question":"","question_id":34,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"s1504"}},
+{"answer":
+{"answer_text":"9","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":152,"other_question":"","question_id":34,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":4.0,"key":"s1505"}},
+{"answer":
+{"answer_text":"No opinion","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":153,"other_question":"","question_id":35,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":0.0,"key":"t0101"}},
+{"answer":
+{"answer_text":"Limited opinion","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":154,"other_question":"","question_id":35,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0102"}},
+{"answer":
+{"answer_text":"Okay","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":155,"other_question":"","question_id":35,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"t0103"}},
+{"answer":
+{"answer_text":"Great","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":156,"other_question":"","question_id":35,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":5.0,"key":"t0104"}},
+{"answer":
+{"answer_text":"Weak","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":157,"other_question":"What is missing?","question_id":35,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"t0105"}},
+{"answer":
+{"answer_text":"Crap","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":158,"other_question":"What make it a crappy?","question_id":35,"requires_other":false,"sequence":6,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":6.0,"key":"t0106"}},
+{"answer":
+{"answer_text":"Zilch ","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":159,"other_question":"What make it a zilch?","question_id":35,"requires_other":false,"sequence":7,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":10.0,"key":"t0107"}},
+{"answer":
+{"answer_text":"GM","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":160,"other_question":"","question_id":36,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0201"}},
+{"answer":
+{"answer_text":"Chrysler","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":161,"other_question":"","question_id":36,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0202"}},
+{"answer":
+{"answer_text":"Ford","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":162,"other_question":"Do you trust the Microsoft thingie?","question_id":36,"requires_other":true,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"t0203"}},
+{"answer":
+{"answer_text":"Slow","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":163,"other_question":"","question_id":37,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0301"}},
+{"answer":
+{"answer_text":"Hard","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":164,"other_question":"Tell me why hard is the best way?","question_id":37,"requires_other":true,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"t0302"}},
+{"answer":
+{"answer_text":"Fast","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":165,"other_question":"","question_id":37,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"t0303"}},
+{"answer":
+{"answer_text":"Easy","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":166,"other_question":"Tell me why easy is the best way?","question_id":37,"requires_other":true,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":4.0,"key":"t0304"}},
+{"answer":
+{"answer_text":"None","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":167,"other_question":"","question_id":37,"requires_other":false,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":5.0,"key":"t0305"}},
+{"answer":
+{"answer_text":"Enter text","text_eval":"!(golf|fish|hunt)","created_at":"2010-12-04T11:21:20Z","id":168,"other_question":"","question_id":38,"requires_other":false,"sequence":1,"short_name":"hobbies","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"t0401"}},
+{"answer":
+{"answer_text":"In one paragraph","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":169,"other_question":"","question_id":39,"requires_other":false,"sequence":1,"short_name":"none","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0501"}},
+{"answer":
+{"answer_text":"Steelers","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":170,"other_question":"","question_id":40,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":5.0,"key":"t0601"}},
+{"answer":
+{"answer_text":"ASU","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":171,"other_question":"","question_id":40,"requires_other":false,"sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":4.0,"key":"t0602"}},
+{"answer":
+{"answer_text":"Alabama","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":172,"other_question":"","question_id":40,"requires_other":false,"sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"t0603"}},
+{"answer":
+{"answer_text":"Auburn","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":173,"other_question":"","question_id":40,"requires_other":false,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0604"}},
+{"answer":
+{"answer_text":"Last Name","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":174,"other_question":"","question_id":41,"requires_other":false,"sequence":1,"short_name":"Last Name","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0701"}},
+{"answer":
+{"answer_text":"First Name","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":175,"other_question":"","question_id":41,"requires_other":false,"sequence":2,"short_name":"First Name","updated_at":"2010-12-30T13:39:22Z","value":0.0,"key":"t0702"}},
+{"answer":
+{"answer_text":"Primary Phone","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":176,"other_question":"","question_id":41,"requires_other":false,"sequence":3,"short_name":"Primary Phone","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0703"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":177,"other_question":"Why so low? Are you dumb?","question_id":42,"requires_other":true,"sequence":1,"short_name":"bad","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0801"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":178,"other_question":"","question_id":42,"requires_other":false,"sequence":2,"short_name":"poor","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"t0802"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":179,"other_question":"","question_id":42,"requires_other":false,"sequence":3,"short_name":"fair","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"t0803"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":180,"other_question":"","question_id":42,"requires_other":false,"sequence":4,"short_name":"good","updated_at":"2010-12-20T23:15:25Z","value":4.0,"key":"t0804"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":181,"other_question":"","question_id":42,"requires_other":false,"sequence":5,"short_name":"great","updated_at":"2010-12-20T23:15:25Z","value":5.0,"key":"t0805"}},
+{"answer":
+{"answer_text":"The quick brown fox jumps the lazy dogs back. ","text_eval":"1::back&1::fox&-0.5::dog&1::(quick|brown|lazy)","created_at":"2010-12-04T11:21:20Z","id":182,"other_question":"","question_id":43,"requires_other":false,"sequence":1,"short_name":"Typing test","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"t0901"}},
+{"answer":
+{"answer_text":"Hint: It is bigger than 3 and smaller than 4.","text_eval":"3.1416+-.000025+-.0001::1+-.001::4","created_at":"2010-12-04T11:21:21Z","id":183,"other_question":"","question_id":44,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"t1001"}},
+{"answer":
+{"answer_text":"Yes","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":184,"other_question":"","question_id":45,"requires_other":false,"sequence":1,"short_name":"Y","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t1101"}},
+{"answer":
+{"answer_text":"No","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":185,"other_question":"","question_id":45,"requires_other":false,"sequence":2,"short_name":"N","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"t1102"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":200,"other_question":"","question_id":50,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:15:25Z","value":0.0,"key":"i0101"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":201,"other_question":"","question_id":50,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"i0102"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":202,"other_question":"","question_id":50,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"i0103"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":203,"other_question":"","question_id":50,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"i0104"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":204,"other_question":"","question_id":50,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:15:25Z","value":4.0,"key":"i0105"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":205,"other_question":"","question_id":51,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:15:26Z","value":0.0,"key":"i0201"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":206,"other_question":"","question_id":51,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:15:26Z","value":1.0,"key":"i0202"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":207,"other_question":"","question_id":51,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:15:26Z","value":2.0,"key":"i0203"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":208,"other_question":"","question_id":51,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:15:26Z","value":3.0,"key":"i0204"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":209,"other_question":"","question_id":51,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:15:26Z","value":4.0,"key":"i0205"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":210,"other_question":"","question_id":52,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:15:26Z","value":0.0,"key":"i0301"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":211,"other_question":"","question_id":52,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:15:26Z","value":1.0,"key":"i0302"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":212,"other_question":"","question_id":52,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:15:26Z","value":2.0,"key":"i0303"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":213,"other_question":"","question_id":52,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:15:26Z","value":3.0,"key":"i0304"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":214,"other_question":"","question_id":52,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:15:26Z","value":4.0,"key":"i0305"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":215,"other_question":"","question_id":53,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:15:26Z","value":0.0,"key":"i0401"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":216,"other_question":"","question_id":53,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:15:26Z","value":1.0,"key":"i0402"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":217,"other_question":"","question_id":53,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:15:26Z","value":2.0,"key":"i0403"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":218,"other_question":"","question_id":53,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:15:26Z","value":3.0,"key":"i0404"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":219,"other_question":"","question_id":53,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:15:26Z","value":4.0,"key":"i0405"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":220,"other_question":"","question_id":54,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:15:26Z","value":0.0,"key":"i0501"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":221,"other_question":"","question_id":54,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:15:26Z","value":1.0,"key":"i0502"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":222,"other_question":"","question_id":54,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:15:26Z","value":2.0,"key":"i0503"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":223,"other_question":"","question_id":54,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:15:26Z","value":3.0,"key":"i0504"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":224,"other_question":"","question_id":54,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:15:26Z","value":4.0,"key":"i0505"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":225,"other_question":"","question_id":55,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:15:26Z","value":0.0,"key":"i0601"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:21Z","id":226,"other_question":"","question_id":55,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:15:26Z","value":1.0,"key":"i0602"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":227,"other_question":"","question_id":55,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:15:26Z","value":2.0,"key":"i0603"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":228,"other_question":"","question_id":55,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:15:26Z","value":3.0,"key":"i0604"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":229,"other_question":"","question_id":55,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:15:26Z","value":4.0,"key":"i0605"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":230,"other_question":"","question_id":56,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:15:26Z","value":0.0,"key":"i0701"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":231,"other_question":"","question_id":56,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:15:26Z","value":1.0,"key":"i0702"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":232,"other_question":"","question_id":56,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:15:26Z","value":2.0,"key":"i0703"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":233,"other_question":"","question_id":56,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:15:26Z","value":3.0,"key":"i0704"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":234,"other_question":"","question_id":56,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:15:26Z","value":4.0,"key":"i0705"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":235,"other_question":"","question_id":57,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:15:26Z","value":0.0,"key":"i0801"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":236,"other_question":"","question_id":57,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:15:26Z","value":1.0,"key":"i0802"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":237,"other_question":"","question_id":57,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:15:26Z","value":2.0,"key":"i0803"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":238,"other_question":"","question_id":57,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:15:26Z","value":3.0,"key":"i0804"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":239,"other_question":"","question_id":57,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:15:26Z","value":4.0,"key":"i0805"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":240,"other_question":"","question_id":58,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:15:26Z","value":0.0,"key":"i0901"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":241,"other_question":"","question_id":58,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:15:26Z","value":1.0,"key":"i0902"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":242,"other_question":"","question_id":58,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:15:26Z","value":2.0,"key":"i0903"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":243,"other_question":"","question_id":58,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:15:26Z","value":3.0,"key":"i0904"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":244,"other_question":"","question_id":58,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:15:26Z","value":4.0,"key":"i0905"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":245,"other_question":"","question_id":59,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:15:26Z","value":0.0,"key":"i1001"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":246,"other_question":"","question_id":59,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:15:26Z","value":1.0,"key":"i1002"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":247,"other_question":"","question_id":59,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:15:26Z","value":2.0,"key":"i1003"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":248,"other_question":"","question_id":59,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:15:26Z","value":3.0,"key":"i1004"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:22Z","id":249,"other_question":"","question_id":59,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:15:26Z","value":4.0,"key":"i1005"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":250,"other_question":"","question_id":60,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:17:36Z","value":0.0,"key":"i1101"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":251,"other_question":"","question_id":60,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:17:36Z","value":1.0,"key":"i1102"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":252,"other_question":"","question_id":60,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:17:36Z","value":2.0,"key":"i1103"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":253,"other_question":"","question_id":60,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:17:36Z","value":3.0,"key":"i1104"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":254,"other_question":"","question_id":60,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:17:36Z","value":4.0,"key":"i1105"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":255,"other_question":"","question_id":61,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:17:36Z","value":0.0,"key":"i1201"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":256,"other_question":"","question_id":61,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:17:36Z","value":1.0,"key":"i1202"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":257,"other_question":"","question_id":61,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:17:36Z","value":2.0,"key":"i1203"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":258,"other_question":"","question_id":61,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:17:36Z","value":3.0,"key":"i1204"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":259,"other_question":"","question_id":61,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:17:36Z","value":4.0,"key":"i1205"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":260,"other_question":"","question_id":62,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:17:36Z","value":0.0,"key":"i1301"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":261,"other_question":"","question_id":62,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:17:36Z","value":1.0,"key":"i1302"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":262,"other_question":"","question_id":62,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:17:36Z","value":2.0,"key":"i1303"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":263,"other_question":"","question_id":62,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:17:36Z","value":3.0,"key":"i1304"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":264,"other_question":"","question_id":62,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:17:36Z","value":4.0,"key":"i1305"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":265,"other_question":"","question_id":63,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:17:36Z","value":0.0,"key":"i1401"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":266,"other_question":"","question_id":63,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:17:36Z","value":1.0,"key":"i1402"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:23Z","id":267,"other_question":"","question_id":63,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:17:36Z","value":2.0,"key":"i1403"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":268,"other_question":"","question_id":63,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:17:36Z","value":3.0,"key":"i1404"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":269,"other_question":"","question_id":63,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:17:36Z","value":4.0,"key":"i1405"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":270,"other_question":"","question_id":64,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:17:36Z","value":0.0,"key":"i1501"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":271,"other_question":"","question_id":64,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:17:36Z","value":1.0,"key":"i1502"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":272,"other_question":"","question_id":64,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:17:36Z","value":2.0,"key":"i1503"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":273,"other_question":"","question_id":64,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:17:36Z","value":3.0,"key":"i1504"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":274,"other_question":"","question_id":64,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:17:36Z","value":4.0,"key":"i1505"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":275,"other_question":"","question_id":65,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:17:36Z","value":0.0,"key":"i1601"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":276,"other_question":"","question_id":65,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:17:36Z","value":1.0,"key":"i1602"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":277,"other_question":"","question_id":65,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:17:36Z","value":2.0,"key":"i1603"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":278,"other_question":"","question_id":65,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:17:36Z","value":3.0,"key":"i1604"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":279,"other_question":"","question_id":65,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:17:36Z","value":4.0,"key":"i1605"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":280,"other_question":"","question_id":66,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:17:37Z","value":0.0,"key":"i1701"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":281,"other_question":"","question_id":66,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:17:37Z","value":1.0,"key":"i1702"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":282,"other_question":"","question_id":66,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:17:37Z","value":2.0,"key":"i1703"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":283,"other_question":"","question_id":66,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:17:37Z","value":3.0,"key":"i1704"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:24Z","id":284,"other_question":"","question_id":66,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:17:37Z","value":4.0,"key":"i1705"}},
+{"answer":
+{"answer_text":"1","text_eval":"","created_at":"2010-12-04T11:21:25Z","id":285,"other_question":"","question_id":67,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:17:37Z","value":0.0,"key":"i1801"}},
+{"answer":
+{"answer_text":"2","text_eval":"","created_at":"2010-12-04T11:21:25Z","id":286,"other_question":"","question_id":67,"requires_other":false,"sequence":2,"short_name":"2","updated_at":"2010-12-20T23:17:37Z","value":1.0,"key":"i1802"}},
+{"answer":
+{"answer_text":"3","text_eval":"","created_at":"2010-12-04T11:21:25Z","id":287,"other_question":"","question_id":67,"requires_other":false,"sequence":3,"short_name":"3","updated_at":"2010-12-20T23:17:37Z","value":2.0,"key":"i1803"}},
+{"answer":
+{"answer_text":"4","text_eval":"","created_at":"2010-12-04T11:21:25Z","id":288,"other_question":"","question_id":67,"requires_other":false,"sequence":4,"short_name":"4","updated_at":"2010-12-20T23:17:37Z","value":3.0,"key":"i1804"}},
+{"answer":
+{"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:25Z","id":289,"other_question":"","question_id":67,"requires_other":false,"sequence":5,"short_name":"5","updated_at":"2010-12-20T23:17:37Z","value":4.0,"key":"i1805"}},
+{"answer":
+{"answer_text":"","text_eval":"","created_at":"2010-12-04T11:21:25Z","id":290,"other_question":"","question_id":68,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:17:37Z","value":0.0,"key":"i1901"}},
+{"answer":
+{"answer_text":"","text_eval":"","created_at":"2010-12-04T11:21:25Z","id":291,"other_question":"","question_id":69,"requires_other":false,"sequence":1,"short_name":"1","updated_at":"2010-12-20T23:17:37Z","value":0.0,"key":"i2001"}},
+{"answer":
+{"answer_text":"Japanese","text_eval":"","created_at":"2010-04-12T12:31:05Z","id":719,"other_question":"Does you pedal stick to the metal?","question_id":36,"requires_other":true,"sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0204"}},
+{"answer":
+{"answer_text":"Other","text_eval":"","created_at":"2010-04-12T12:31:43Z","id":720,"other_question":"Who made it?","question_id":36,"requires_other":true,"sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t0205"}},
+{"answer":
+{"answer_text":"Noun(s)","text_eval":"fox&back","created_at":"2010-08-08T12:59:06Z","id":721,"other_question":"","question_id":156,"requires_other":false,"sequence":1,"short_name":"nouns","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t1201"}},
+{"answer":
+{"answer_text":"Verb(s)","text_eval":"jumps","created_at":"2010-08-08T12:59:55Z","id":722,"other_question":"","question_id":156,"requires_other":false,"sequence":2,"short_name":"Verbs","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t1202"}},
+{"answer":
+{"answer_text":"At least one adjective","text_eval":"(quick|brown|lazy)","created_at":"2010-08-08T13:01:20Z","id":723,"other_question":"","question_id":156,"requires_other":false,"sequence":3,"short_name":"adjective","updated_at":"2010-12-20T23:15:25Z","value":1.0,"key":"t1203"}}]

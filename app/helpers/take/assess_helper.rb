@@ -207,20 +207,24 @@ module Take
       when "radio"
         required = question["score_method"].downcase == "none" ? "" : "required-one"
         behavior =  "toggle_other" 
-        result = radio_button_tag("post[answer][#{question["id"]}][]",answer["id"].to_s, exists, :class => required, :"data-behavior" => behavior , :id => "qa_#{question["id"]}_#{answer["id"]}")
+        result = radio_button_tag("post[answer][#{question["id"]}][]",answer["id"].to_s, exists,
+         :class => required, :"data-behavior" => behavior , :id => "qa_#{question["id"]}_#{answer["id"]}")
       when "checkbox"
         required = question["score_method"].downcase == "none" ? "" : "required-one"
         behavior = answer["requires_other"] ? "toggle_other" : "none"
         chkd = false
-        result = check_box_tag("post[answer][#{question["id"]}][]",answer["id"].to_s, exists, :class => required, :"data-behavior" => behavior, :id => "qa_#{question["id"]}_#{answer["id"]}")
+        result = check_box_tag("post[answer][#{question["id"]}][]",answer["id"].to_s, exists,
+         :class => required, :"data-behavior" => behavior, :id => "qa_#{question["id"]}_#{answer["id"]}")
       when "textarea"
         required = question["score_method"].downcase == "none" ? "" : "required"
         hidden_elem = hidden_field_tag("post[answer][#{question["id"]}][]",answer["id"].to_s,:id => nil ) 
-        result = hidden_elem + text_area_tag("post[text][#{answer["id"]}]",text, :class => required,  :id => "qa_#{question["id"]}_#{answer["id"]}")
+        result = hidden_elem + text_area_tag("post[text][#{answer["id"]}]",text,
+         :class => required,  :id => "qa_#{question["id"]}_#{answer["id"]}")
       when /text/i
         required = question["score_method"].downcase == "none" ? "" : "required"
         hidden_elem = hidden_field_tag("post[answer][#{question["id"]}][]",answer["id"].to_s,:id => nil ) 
-        result = hidden_elem + text_field_tag("post[text][#{answer["id"]}]",text, :class => required,  :id => "qa_#{question["id"]}_#{answer["id"]}")
+        result = hidden_elem + text_field_tag("post[text][#{answer["id"]}]",text,
+         :class => required,  :id => "qa_#{question["id"]}_#{answer["id"]}")
       end
     end
     

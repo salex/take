@@ -126,7 +126,12 @@ function isEmpty(e) {
 }
 
 function isSelected(e) {
-	return e.options ? e.selectedIndex > 0: false;
+    if (e.type != "select-one") {
+    	return e.options ? e.selectedIndex >= 0: false;
+        
+    }else{
+	    return e.options ? e.selectedIndex > 0: false;
+    };
 }
 
 function isChecked(e) {

@@ -7,14 +7,11 @@ module Take
         return false
       end
       assessment = Assessment.find(id)
-
       maxRaw = 0
       maxWeighted = 0
-
       for question in assessment.questions
         maxQues = 0
         sumQues = 0
-
         weight = question.weight.nil? ? 0 : question.weight.to_f
         ansType = question.answer_tag.blank? ? "" : question.answer_tag.downcase
         scoreMethod = question.score_method.blank? ? "value" : question.score_method.downcase
@@ -57,9 +54,9 @@ module Take
       end
       return self.to_json
     end
+    
     def self.publish(aid)
       assessment = Assessment.find(aid)
-      
       assessment[:questions] = []
       for question in assessment.questions
         question[:answers] = []
@@ -78,7 +75,7 @@ module Take
       hash["questions"].each do |question|
         sum = 0
         max = 0
-        puts question["question_text"]
+        #puts question["question_text"]
         qid = question["id"].to_s
         answered = post["answer"][qid]
         a_ids = question["answers"].collect{|i| i["id"].to_s}        
@@ -113,7 +110,6 @@ module Take
       end
         post["scores"]["Totals"] = "#{totalScore} #{totalScoreWeighted}"
       return totalScore, totalScoreWeighted, post, hash
-
     end
     
     def self.score_textNumeric(value,eval,ans)
@@ -131,7 +127,6 @@ module Take
         delta = deltas[0].to_f
         min = exact - delta
         max = exact + delta
-        
         if deltas.size > 0
           scores[i] = ans.between?(min,max) ? (value - deltas[1].to_f) : 0.0
         else
@@ -140,11 +135,9 @@ module Take
       end
       result = scores.max
       return  result < 0.0 ? 0.0 : result
-      
     end
     
     def self.score_textContains(value,eval,ans)
-    
       exact = partial_plus = partial_minus = ""
       score_exact = score_partial_plus = score_partial_minus = 0.0
       sections = eval.split(">>")
@@ -198,6 +191,4 @@ module Take
     end
     #score_textContains(value,eval,ans)
   end
-  
-  
 end

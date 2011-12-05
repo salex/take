@@ -1,5 +1,7 @@
 class Assessor < ActiveRecord::Base
+  default_scope :order => :sequence
   before_save :get_published
+  belongs_to :assessing, :polymorphic => true
   
   
   def get_published

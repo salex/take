@@ -21,7 +21,9 @@ module Take
     end
 
     def updateMax
-      Assessment.computeMax(self.assessment.id) if is_dirty?
+      if self.assessment
+        Assessment.computeMax(self.assessment.id) if is_dirty?
+      end
     end
     
     def valid_score_method

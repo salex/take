@@ -141,8 +141,6 @@ module Take
       return value
     end
     #score_textContains(value,eval,ans)
-    
-    
   end
   
 end

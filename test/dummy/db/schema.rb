@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111029141311) do
+ActiveRecord::Schema.define(:version => 20111031091617) do
 
   create_table "assessors", :force => true do |t|
     t.integer  "assessment_id"
@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(:version => 20111029141311) do
     t.text     "publish_json"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "assessable_id"
+    t.string   "assessable_type"
+    t.integer  "sequence"
   end
 
   create_table "take_answers", :force => true do |t|

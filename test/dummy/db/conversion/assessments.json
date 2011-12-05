@@ -1,0 +1,15 @@
+[
+{"assessment":
+{"default_answer_tag":"Textform","category":"other.address","created_at":"2010-12-04T11:11:17Z","description":"Uses form to gather contact information","default_display":"List","id":1,"instructions":"","max_raw":"0.0","max_weighted":"0.0","name":"other.master","status":"Master","updated_at":"2010-12-22T15:18:35Z","key":"a"}},
+{"assessment":
+{"default_answer_tag":"Radio","category":"application.general","created_at":"2010-12-04T11:11:17Z","description":"All applicants for AIDT training are required to provide some general information that applies to all applications. This information may or may not be used on the application for this training.","default_display":"Inline","id":2,"instructions":"","max_raw":"13.0","max_weighted":"3.0","name":"application.master","status":"Master","updated_at":"2010-12-24T16:49:09Z","key":"g"}},
+{"assessment":
+{"default_answer_tag":"","category":"application.education","created_at":"2010-12-04T11:11:17Z","description":"","default_display":"List","id":3,"instructions":"","max_raw":"5.0","max_weighted":"5.0","name":"application.master","status":"Master","updated_at":"2010-12-24T16:49:09Z","key":"e"}},
+{"assessment":
+{"default_answer_tag":"","category":"application.experience","created_at":"2010-12-04T11:11:17Z","description":"Please provide information on current/last job and the previous two jobs.","default_display":"List","id":4,"instructions":"All applicants for AIDT training are required to provide work history for your last three jobs.","max_raw":"0.0","max_weighted":"0.0","name":"application.master","status":"Master","updated_at":"2010-12-22T15:29:53Z","key":"w"}},
+{"assessment":
+{"default_answer_tag":"Radio","category":"application.skills","created_at":"2010-12-04T11:11:17Z","description":"For each skill area, select the number of years of experience you have in that area. Select the closest number.","default_display":"Inline","id":5,"instructions":"All applicants for AIDT training are required to provide work skills history that applies to all applications. This information may or may not be used on the application for this training.","max_raw":"60.0","max_weighted":"0.0","name":"application.master","status":"Master","updated_at":"2010-12-24T16:49:12Z","key":"s"}},
+{"assessment":
+{"default_answer_tag":"","category":"application.test","created_at":"2010-12-04T11:11:17Z","description":"An example assessment that tests all the current features.","default_display":"List","id":6,"instructions":"Please answer all these silly questions to the best of your ability.","max_raw":"50.0","max_weighted":"84.0","name":"test.master","status":"Master","updated_at":"2010-12-24T16:49:15Z","key":"t"}},
+{"assessment":
+{"default_answer_tag":"","category":"evaluation.instructor","created_at":"2010-12-04T11:11:17Z","description":"Instructor Evaluation","default_display":"Inline","id":10,"instructions":"","max_raw":"72.0","max_weighted":"72.0","name":"Instructor Evaluation","status":"Master","updated_at":"2010-12-24T16:49:15Z","key":"i"}}]

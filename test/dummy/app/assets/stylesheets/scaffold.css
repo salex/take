@@ -20,6 +20,9 @@ div.field, div.actions {
   margin-bottom: 10px;
 }
 
+div.field label{width:10em;font-weight:bold;display:inline-block;text-align:right;}
+div.field br {line-height:0;margin:0;display:none;}
+
 #notice {
   color: green;
 }

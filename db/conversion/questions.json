@@ -1,0 +1,133 @@
+[
+{"question":
+{"answer_tag":"Text","assessment_id":1,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"list","group_header":"","id":1,"min_critical_value":0,"instructions":"","question_text":"Contact Information","score_method":"Value","sequence":1,"short_name":"Contact","updated_at":"2010-12-20T23:15:23Z","weight":"0.0","key":"a01"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"Please check Yes or No to the following questions","id":2,"min_critical_value":0,"instructions":"","question_text":"Have you been employed previously by this company?","score_method":"Value","sequence":1,"short_name":"Previously Employed","updated_at":"2010-12-20T23:15:23Z","weight":"1.0","key":"g01"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":3,"min_critical_value":0,"instructions":"","question_text":"Are you related to anyone now employed by this company?","score_method":"Value","sequence":2,"short_name":"Related Employee","updated_at":"2010-12-20T23:15:23Z","weight":"1.0","key":"g02"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":4,"min_critical_value":0,"instructions":"","question_text":"Are you able to attend training at night?","score_method":"Value","sequence":3,"short_name":"Train Night","updated_at":"2010-12-20T23:15:23Z","weight":"0.0","key":"g03"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":5,"min_critical_value":0,"instructions":"","question_text":"Are you able to attend training during the day?","score_method":"Value","sequence":4,"short_name":"Train Day","updated_at":"2010-12-20T23:15:23Z","weight":"0.0","key":"g04"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":6,"min_critical_value":0,"instructions":"","question_text":"Are you able to attend training on Saturday?","score_method":"Value","sequence":5,"short_name":"Train Saturday","updated_at":"2010-12-20T23:15:23Z","weight":"0.0","key":"g05"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":7,"min_critical_value":0,"instructions":"","question_text":"Are you a citizen of the United States?","score_method":"Value","sequence":6,"short_name":"US Citizen","updated_at":"2010-12-20T23:15:23Z","weight":"0.0","key":"g06"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":8,"min_critical_value":0,"instructions":"","question_text":"If required, are you willing to work 1st Shift?","score_method":"Value","sequence":7,"short_name":"1st Shift","updated_at":"2010-12-20T23:15:23Z","weight":"0.0","key":"g07"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":9,"min_critical_value":0,"instructions":"","question_text":"If required, are you willing to work 2nd Shift?","score_method":"Value","sequence":8,"short_name":"2nd Shift","updated_at":"2010-12-20T23:15:23Z","weight":"0.0","key":"g08"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":10,"min_critical_value":0,"instructions":"","question_text":"If required, are you willing to work 3rd Shift?","score_method":"Value","sequence":9,"short_name":"3rd Shift","updated_at":"2010-12-20T23:15:23Z","weight":"0.0","key":"g09"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":true,"type_display":"Inline","group_header":"","id":11,"min_critical_value":1,"instructions":"","question_text":"If required, are you willing to work Swing/Rotating Shifts?","score_method":"Value","sequence":10,"short_name":"Swing/Rotating Shif","updated_at":"2010-12-20T23:15:23Z","weight":"1.0","key":"g10"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":12,"min_critical_value":0,"instructions":"","question_text":"If required, are you willing to work overtime?","score_method":"Value","sequence":11,"short_name":"Work overtime","updated_at":"2010-12-20T23:15:23Z","weight":"0.0","key":"g11"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":13,"min_critical_value":0,"instructions":"","question_text":"If required, are you willing to work weekends?","score_method":"Value","sequence":12,"short_name":"Work weekends","updated_at":"2010-12-20T23:15:23Z","weight":"0.0","key":"g12"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":2,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":14,"min_critical_value":0,"instructions":"","question_text":"If required, are you willing to work holidays?","score_method":"Value","sequence":13,"short_name":"Work holidays","updated_at":"2010-12-20T23:15:24Z","weight":"0.0","key":"g13"}},
+{"question":
+{"answer_tag":"Checkbox","assessment_id":3,"created_at":"2010-12-04T11:21:13Z","critical":true,"type_display":"List","group_header":"","id":15,"min_critical_value":3,"instructions":"","question_text":"Please check <strong>all</strong> education or training levels that apply. Supply additional information if required.","score_method":"Value","sequence":1,"short_name":"Education","updated_at":"2010-12-20T23:15:24Z","weight":"1.0","key":"e01"}},
+{"question":
+{"answer_tag":"Text","assessment_id":4,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"List","group_header":"","id":16,"min_critical_value":0,"instructions":"","question_text":"Current/Last","score_method":"Value","sequence":1,"short_name":"Current/Last","updated_at":"2010-12-22T15:31:22Z","weight":"1.0","key":"w01"}},
+{"question":
+{"answer_tag":"Text","assessment_id":4,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"List","group_header":"","id":17,"min_critical_value":0,"instructions":"","question_text":"Last","score_method":"None","sequence":2,"short_name":"Last","updated_at":"2010-12-28T15:59:35Z","weight":"1.0","key":"w02"}},
+{"question":
+{"answer_tag":"Text","assessment_id":4,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"List","group_header":"","id":18,"min_critical_value":0,"instructions":"","question_text":"Previous","score_method":"None","sequence":3,"short_name":"Previous","updated_at":"2010-12-28T16:01:20Z","weight":"1.0","key":"w03"}},
+{"question":
+{"answer_tag":"Textarea","assessment_id":4,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"List","group_header":"","id":19,"min_critical_value":0,"instructions":"","question_text":"Describe any other work experience.","score_method":"None","sequence":4,"short_name":"Other","updated_at":"2010-12-28T15:59:58Z","weight":"1.0","key":"w04"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":20,"min_critical_value":null,"instructions":"","question_text":"Aircraft Maintenance","score_method":"Value","sequence":1,"short_name":"Aircraft Maintenanc","updated_at":"2010-12-23T21:36:53Z","weight":"0.0","key":"s01"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":21,"min_critical_value":0,"instructions":"","question_text":"Assembly Operations","score_method":"Value","sequence":2,"short_name":"Assembly Operations","updated_at":"2010-12-20T23:15:24Z","weight":"0.0","key":"s02"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":22,"min_critical_value":0,"instructions":"","question_text":"Basic Sheet Metal","score_method":"Value","sequence":3,"short_name":"Basic Sheet Metal","updated_at":"2010-12-20T23:15:24Z","weight":"0.0","key":"s03"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":23,"min_critical_value":0,"instructions":"","question_text":"Blueprint Reading","score_method":"Value","sequence":4,"short_name":"Blueprint Reading","updated_at":"2010-12-20T23:15:24Z","weight":"0.0","key":"s04"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":24,"min_critical_value":0,"instructions":"","question_text":"Chemical Plant Operations","score_method":"Value","sequence":5,"short_name":"Chemical Plant Oper","updated_at":"2010-12-20T23:15:24Z","weight":"0.0","key":"s05"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":25,"min_critical_value":0,"instructions":"","question_text":"CNC Machining","score_method":"Value","sequence":6,"short_name":"CNC Machining","updated_at":"2010-12-20T23:15:24Z","weight":"0.0","key":"s06"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":26,"min_critical_value":0,"instructions":"","question_text":"Conventional Machining","score_method":"Value","sequence":7,"short_name":"Conventional Machin","updated_at":"2010-12-20T23:15:24Z","weight":"0.0","key":"s07"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":27,"min_critical_value":0,"instructions":"","question_text":"Customer Service","score_method":"Value","sequence":8,"short_name":"Customer Service","updated_at":"2010-12-20T23:15:24Z","weight":"0.0","key":"s08"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":28,"min_critical_value":0,"instructions":"","question_text":"Distribution/Warehousing Operations","score_method":"Value","sequence":9,"short_name":"Distribution/Wareho","updated_at":"2010-12-20T23:15:24Z","weight":"0.0","key":"s09"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":29,"min_critical_value":0,"instructions":"","question_text":"Electrical Maintenance","score_method":"Value","sequence":10,"short_name":"Electrical Maintena","updated_at":"2010-12-20T23:15:24Z","weight":"0.0","key":"s10"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":30,"min_critical_value":0,"instructions":"","question_text":"Forklift Operation","score_method":"Value","sequence":11,"short_name":"Forklift Operation","updated_at":"2010-12-20T23:15:25Z","weight":"0.0","key":"s11"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":31,"min_critical_value":0,"instructions":"","question_text":"Manufacturing Machine Operations","score_method":"Value","sequence":12,"short_name":"Manufacturing Machi","updated_at":"2010-12-20T23:15:25Z","weight":"0.0","key":"s12"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":32,"min_critical_value":0,"instructions":"","question_text":"Mechanical Maintenance","score_method":"Value","sequence":13,"short_name":"Mechanical Maintena","updated_at":"2010-12-20T23:15:25Z","weight":"0.0","key":"s13"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":33,"min_critical_value":0,"instructions":"","question_text":"Programmable Logic Controllers","score_method":"Value","sequence":14,"short_name":"Programmable Logic ","updated_at":"2010-12-23T21:37:12Z","weight":"0.0","key":"s14"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":5,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"","id":34,"min_critical_value":0,"instructions":"","question_text":"Pneumatic/Hydraulic Maintenance","score_method":"Value","sequence":15,"short_name":"Pneumatic/Hydraulic","updated_at":"2010-12-20T23:15:25Z","weight":"0.0","key":"s15"}},
+{"question":
+{"answer_tag":"Select","assessment_id":6,"created_at":"2010-12-04T11:21:13Z","critical":true,"type_display":"List","group_header":"","id":35,"min_critical_value":1,"instructions":"","question_text":"What do you think about the state of the world?","score_method":"Value","sequence":1,"short_name":"World State","updated_at":"2010-12-20T23:15:25Z","weight":"1.0","key":"t01"}},
+{"question":
+{"answer_tag":"Checkbox","assessment_id":6,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"Inline","group_header":"Please select all answers that apply","id":36,"min_critical_value":-1,"instructions":"","question_text":"Who made your car(s)","score_method":"Sum","sequence":2,"short_name":"aids checkbox sum","updated_at":"2010-12-20T23:15:25Z","weight":"5.0","key":"t02"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":6,"created_at":"2010-12-04T11:21:13Z","critical":false,"type_display":"list","group_header":"","id":37,"min_critical_value":-1,"instructions":"","question_text":"What is the best way?","score_method":"Value","sequence":3,"short_name":"best way","updated_at":"2010-12-20T23:15:25Z","weight":"3.0","key":"t03"}},
+{"question":
+{"answer_tag":"Text","assessment_id":6,"created_at":"2010-12-04T11:21:14Z","critical":true,"type_display":"list","group_header":"","id":38,"min_critical_value":1,"instructions":"You know I really miss playing golf.","question_text":"What do you do when you are not working? Hobbies, etc.","score_method":"Value","sequence":4,"short_name":"Text Eval","updated_at":"2010-12-20T23:15:25Z","weight":"1.0","key":"t04"}},
+{"question":
+{"answer_tag":"Textarea","assessment_id":6,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"list","group_header":"","id":39,"min_critical_value":-1,"instructions":"","question_text":"Please describe the history of the world","score_method":"Value","sequence":5,"short_name":"Textarea","updated_at":"2010-12-20T23:15:25Z","weight":"1.0","key":"t05"}},
+{"question":
+{"answer_tag":"Select-multiple","assessment_id":6,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"list","group_header":"","id":40,"min_critical_value":0,"instructions":"","question_text":"What is your favorite team?","score_method":"sum","sequence":6,"short_name":"multi select","updated_at":"2010-12-20T23:15:25Z","weight":"1.0","key":"t06"}},
+{"question":
+{"answer_tag":"Text","assessment_id":6,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"List","group_header":"","id":41,"min_critical_value":0,"instructions":"","question_text":"Please enter your contact infomation","score_method":"Value","sequence":7,"short_name":"text form","updated_at":"2010-12-30T13:36:40Z","weight":"1.0","key":"t07"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":6,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"Inline","group_header":"","id":42,"min_critical_value":0,"instructions":"","question_text":"Please rate the ease of filling out this applications from 1 being very difficult to 5 being very easy","score_method":"Value","sequence":8,"short_name":"survey","updated_at":"2010-12-20T23:15:25Z","weight":"0.0","key":"t08"}},
+{"question":
+{"answer_tag":"Text","assessment_id":6,"created_at":"2010-12-04T11:21:14Z","critical":true,"type_display":"List","group_header":"","id":43,"min_critical_value":1,"instructions":"","question_text":"What are the nouns and at least one adjective in the following sentence?","score_method":"TextContains","sequence":9,"short_name":"Completion score","updated_at":"2010-12-20T23:15:25Z","weight":"1.0","key":"t09"}},
+{"question":
+{"answer_tag":"Text","assessment_id":6,"created_at":"2010-12-04T11:21:14Z","critical":true,"type_display":"List","group_header":"","id":44,"min_critical_value":1,"instructions":"","question_text":"What is the value of Pi (&#960;) to 4 decimal places","score_method":"TextNumeric","sequence":10,"short_name":"Numeric score","updated_at":"2010-12-20T23:15:25Z","weight":"1.0","key":"t10"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":6,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"Inline","group_header":"","id":45,"min_critical_value":0,"instructions":"","question_text":"Is it worth it?","score_method":"Value","sequence":11,"short_name":"worth","updated_at":"2010-12-20T23:15:25Z","weight":"1.0","key":"t11"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":50,"min_critical_value":0,"instructions":"","question_text":"Plans instruction consistent with training objectives","score_method":"Value","sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","weight":"1.0","key":"i01"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":51,"min_critical_value":0,"instructions":"","question_text":"Maintains accurate trainee records","score_method":"Value","sequence":2,"short_name":"","updated_at":"2010-12-20T23:15:25Z","weight":"1.0","key":"i02"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":52,"min_critical_value":0,"instructions":"","question_text":"Prepares necessary training materials prior to instruction","score_method":"Value","sequence":3,"short_name":"","updated_at":"2010-12-20T23:15:26Z","weight":"1.0","key":"i03"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":53,"min_critical_value":0,"instructions":"","question_text":"Clearly communicates directions, assignments, and expectations to trainees","score_method":"Value","sequence":4,"short_name":"","updated_at":"2010-12-20T23:15:26Z","weight":"1.0","key":"i04"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":54,"min_critical_value":0,"instructions":"","question_text":"Recognizes and reinforces appropriate trainee behavior","score_method":"Value","sequence":5,"short_name":"","updated_at":"2010-12-20T23:15:26Z","weight":"1.0","key":"i05"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":55,"min_critical_value":0,"instructions":"","question_text":"Promptly communicates problems to the Company","score_method":"Value","sequence":6,"short_name":"","updated_at":"2010-12-20T23:15:26Z","weight":"1.0","key":"i06"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":56,"min_critical_value":0,"instructions":"","question_text":"Enforces company policies","score_method":"Value","sequence":7,"short_name":"","updated_at":"2010-12-20T23:15:26Z","weight":"1.0","key":"i07"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":57,"min_critical_value":0,"instructions":"","question_text":"Uses current/accurate resource materials","score_method":"Value","sequence":8,"short_name":"","updated_at":"2010-12-20T23:15:26Z","weight":"1.0","key":"i08"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":58,"min_critical_value":0,"instructions":"","question_text":"Uses a variety of instructional strategies, including technology and other media","score_method":"Value","sequence":9,"short_name":"","updated_at":"2010-12-20T23:15:26Z","weight":"1.0","key":"i09"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":59,"min_critical_value":0,"instructions":"","question_text":"Maintains student involvement during instruction","score_method":"Value","sequence":10,"short_name":"","updated_at":"2010-12-20T23:15:26Z","weight":"1.0","key":"i10"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":60,"min_critical_value":0,"instructions":"","question_text":"Evaluates trainee performance effectively","score_method":"Value","sequence":11,"short_name":"","updated_at":"2010-12-20T23:17:36Z","weight":"1.0","key":"i11"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":61,"min_critical_value":0,"instructions":"","question_text":"Provides trainees with feedback on performance","score_method":"Value","sequence":12,"short_name":"","updated_at":"2010-12-20T23:17:36Z","weight":"1.0","key":"i12"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":62,"min_critical_value":0,"instructions":"","question_text":"Maintains professional competence in topics","score_method":"Value","sequence":13,"short_name":"","updated_at":"2010-12-20T23:17:36Z","weight":"1.0","key":"i13"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":63,"min_critical_value":0,"instructions":"","question_text":"Maintains instructor-student relationship during instruction","score_method":"Value","sequence":14,"short_name":"","updated_at":"2010-12-20T23:17:36Z","weight":"1.0","key":"i14"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":64,"min_critical_value":0,"instructions":"","question_text":"Displays professional and ethical conduct during instruction","score_method":"Value","sequence":15,"short_name":"","updated_at":"2010-12-20T23:17:36Z","weight":"1.0","key":"i15"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":65,"min_critical_value":0,"instructions":"","question_text":"Maintains professional relationship with the Company","score_method":"Value","sequence":16,"short_name":"","updated_at":"2010-12-20T23:17:36Z","weight":"1.0","key":"i16"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":66,"min_critical_value":0,"instructions":"","question_text":"Submits legible paperwork in timely manner","score_method":"Value","sequence":17,"short_name":"","updated_at":"2010-12-20T23:17:36Z","weight":"1.0","key":"i17"}},
+{"question":
+{"answer_tag":"Radio","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"inline","group_header":"","id":67,"min_critical_value":0,"instructions":"","question_text":"Reliable (attendance/promptness)","score_method":"Value","sequence":18,"short_name":"","updated_at":"2010-12-20T23:17:37Z","weight":"1.0","key":"i18"}},
+{"question":
+{"answer_tag":"Textarea","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"list","group_header":"","id":68,"min_critical_value":0,"instructions":"","question_text":"Comments:","score_method":"Value","sequence":19,"short_name":"","updated_at":"2010-12-20T23:17:37Z","weight":"0.0","key":"i19"}},
+{"question":
+{"answer_tag":"Textarea","assessment_id":10,"created_at":"2010-12-04T11:21:14Z","critical":false,"type_display":"list","group_header":"","id":69,"min_critical_value":0,"instructions":"","question_text":"Corrective Measures:","score_method":"Value","sequence":20,"short_name":"","updated_at":"2010-12-20T23:17:37Z","weight":"0.0","key":"i20"}},
+{"question":
+{"answer_tag":"Text","assessment_id":6,"created_at":"2010-08-08T12:57:15Z","critical":true,"type_display":"List","group_header":"Please provide the part of speech of  the following sentence.","id":156,"min_critical_value":2,"instructions":"Where is this going to go","question_text":" \"The quick brown fox jumps the laze dogs back.\"","score_method":"TextContains","sequence":12,"short_name":"parts of speech","updated_at":"2010-12-20T23:15:25Z","weight":"2.0","key":"t12"}}]

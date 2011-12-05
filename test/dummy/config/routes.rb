@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   end
   
   mount Take::Engine => "/take"
+  root :to => "assessors#index"
+  
 end

@@ -12,6 +12,18 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :assessable_id %><br />
+    <%= f.text_field :assessable_id %>
+  </div>
+  <div class="field">
+    <%= f.label :assessable_type %><br />
+    <%= f.text_field :assessable_type %>
+  </div>
+  <div class="field">
+    <%= f.label :sequence %><br />
+    <%= f.number_field :sequence %>
+  </div>
+  <div class="field">
     <%= f.label :assessment_id %><br />
     <%= f.number_field :assessment_id %>
   </div>
