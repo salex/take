@@ -51,7 +51,7 @@ module Take
       end
       post["scores"]["total"] = {raw: totalScore, weighted: totalScoreWeighted}
       post["scores"]["percent"] = {raw: (totalScore / hash["max_raw"]) , weighted: (totalScoreWeighted / hash["max_weighted"])}
-     all = []
+      all = []
       post["answer"].each do |key,value|
         all.concat(value)
       end
@@ -101,7 +101,7 @@ module Take
           exact = sections[i]
         end
       end
-      score_exact = _score_exact(value,exact,ans) unless exact.blank?
+      score_exact = self._score_exact(value,exact,ans) unless exact.blank?
       score_partial_plus = self._score_partial(partial_plus,ans) unless partial_plus.blank?
       score_partial_minus = self._score_partial(partial_minus,ans) unless partial_minus.blank?
       score = [(score_exact - score_partial_minus),(score_partial_plus - score_partial_minus) ].max

@@ -20,8 +20,8 @@ if 3.1406 => 0 0 0 1 = 1
 if 3.1405 => 0 0 0 0 = 0
 
 10 points
-quick&brown&lazy&(fox|back)>>+quick::2&brown::2&lazy::2&fox::1%back::1>>-dog::1
-
+(quick|brown|lazy)&fox&back>>+quick::2&brown::2&lazy::2&fox::4&back::4>>-dog::1
+1::back&1::fox&-0.5::dog&1::(quick|brown|lazy)
 sections
     exact >>+ partial plus >>- partial minus
 

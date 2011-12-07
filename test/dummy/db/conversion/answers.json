@@ -362,7 +362,7 @@
 {"answer":
 {"answer_text":"5","text_eval":"","created_at":"2010-12-04T11:21:20Z","id":181,"other_question":"","question_id":42,"requires_other":false,"sequence":5,"short_name":"great","updated_at":"2010-12-20T23:15:25Z","value":5.0,"key":"t0805"}},
 {"answer":
-{"answer_text":"The quick brown fox jumps the lazy dogs back. ","text_eval":"1::back&1::fox&-0.5::dog&1::(quick|brown|lazy)","created_at":"2010-12-04T11:21:20Z","id":182,"other_question":"","question_id":43,"requires_other":false,"sequence":1,"short_name":"Typing test","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"t0901"}},
+{"answer_text":"The quick brown fox jumps the lazy dogs back. ","text_eval":"(quick|brown|lazy)&fox&back>>+quick::2&brown::2&lazy::2&fox::4&back::4>>-dog::1","created_at":"2010-12-04T11:21:20Z","id":182,"other_question":"","question_id":43,"requires_other":false,"sequence":1,"short_name":"Typing test","updated_at":"2010-12-20T23:15:25Z","value":3.0,"key":"t0901"}},
 {"answer":
 {"answer_text":"Hint: It is bigger than 3 and smaller than 4.","text_eval":"3.1416+-.000025+-.0001::1+-.001::4","created_at":"2010-12-04T11:21:21Z","id":183,"other_question":"","question_id":44,"requires_other":false,"sequence":1,"short_name":"","updated_at":"2010-12-20T23:15:25Z","value":2.0,"key":"t1001"}},
 {"answer":
