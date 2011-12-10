@@ -43,7 +43,7 @@ module Take
       return true
     end
     
-    def publish
+    def publish(tojson = true)
       self[:questions] = []
       for question in self.questions
         question[:answers] = []
@@ -52,7 +52,7 @@ module Take
         end
         self[:questions] << question
       end
-      return self.to_json
+      return  tojson ? self.to_json : self
     end
     
     def self.publish(aid)

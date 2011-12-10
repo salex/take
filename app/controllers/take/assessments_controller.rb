@@ -16,7 +16,8 @@ module Take
     # GET /assessments/1.json
     def show
       @assessment = Assessment.find(params[:id])
-      
+      @assmnt_hash = @assessment.publish(false)
+    	
       respond_to do |format|
         format.html # show.html.erb
         format.json { render json: @assessment }
@@ -90,14 +91,14 @@ module Take
       end
       
       #@json = ActiveSupport::JSON.decode(@assessment.publish)
-      @hash = Assessment.publish(params[:id])
+      @assmnt_hash = Assessment.publish(params[:id])
     end
     
     def post
       #@assessment = Assessment.find(params[:id])
       #@json = ActiveSupport::JSON.decode(@assessment.publish)
-      @hash = Assessment.publish(params[:id])
-      results = Assess.score_assessment(@hash,params[:post])
+      @assmnt_hash = Assessment.publish(params[:id])
+      results = Assess.score_assessment(@assmnt_hash,params[:post])
       
       session[:post] = {} unless session[:post]
       session[:post][params[:id]] = params[:post]

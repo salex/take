@@ -1,11 +1,11 @@
 module Take
   class Assess < Assessment
     
-    def self.score_assessment(hash,post)
+    def self.score_assessment(assmnt_hash,post)
       totalScore = 0
       totalScoreWeighted = 0
       post["scores"] = {}
-      hash["questions"].each do |question|
+      assmnt_hash["questions"].each do |question|
         sum = 0
         max = 0
         puts question["question_text"]
@@ -50,7 +50,7 @@ module Take
         #puts "Totals #{totalScore} #{totalScoreWeighted}"
       end
       post["scores"]["total"] = {raw: totalScore, weighted: totalScoreWeighted}
-      post["scores"]["percent"] = {raw: (totalScore / hash["max_raw"]) , weighted: (totalScoreWeighted / hash["max_weighted"])}
+      post["scores"]["percent"] = {raw: (totalScore / assmnt_hash["max_raw"]) , weighted: (totalScoreWeighted / assmnt_hash["max_weighted"])}
       all = []
       post["answer"].each do |key,value|
         all.concat(value)
@@ -101,13 +101,15 @@ module Take
           exact = sections[i]
         end
       end
-      score_exact = self._score_exact(value,exact,ans) unless exact.blank?
-      score_partial_plus = self._score_partial(partial_plus,ans) unless partial_plus.blank?
-      score_partial_minus = self._score_partial(partial_minus,ans) unless partial_minus.blank?
+      score_exact = _score_exact(value,exact,ans) unless exact.blank?
+      score_partial_plus = _score_partial(partial_plus,ans) unless partial_plus.blank?
+      score_partial_minus = _score_partial(partial_minus,ans) unless partial_minus.blank?
       score = [(score_exact - score_partial_minus),(score_partial_plus - score_partial_minus) ].max
-      return score > 0 ? score : 0.0
+      score =  score > 0 ? score : 0.0
+      return score > value ? value : score
     end
     
+  private
     def self._score_exact(value,eval,ans)
       value = value.to_f
       eq = true

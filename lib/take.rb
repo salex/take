@@ -1,4 +1,5 @@
 require "take/engine"
+require "take/render_helper"
 
 module Take
     

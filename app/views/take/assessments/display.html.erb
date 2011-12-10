@@ -14,7 +14,7 @@
 <fieldset class="f-left col-24">
   <legend>Section - <%=@assessment["category"]%></legend>
   <%=form_tag post_assessment_path(@assessment), :id => "assessarea", :name => "assessarea", :"data-behavior" => "validateRequired" %>
-  <%= format_assessment_hash(@hash,@post)%>
+  <%= render_assessor(@assmnt_hash,@post)%>
   
 
       <input type="submit" name="submit" value="Continue" />

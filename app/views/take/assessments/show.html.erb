@@ -84,7 +84,6 @@
 	</div>
 	
 	<hr />
-	<% @hash = Take::Assessment.publish(@assessment.id) %>
-	<%= format_assessment_hash(@hash,@post)%>
+	<%= render_assessor(@assmnt_hash,@post)%>
   
 </fieldset>
