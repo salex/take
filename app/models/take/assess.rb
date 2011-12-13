@@ -28,10 +28,14 @@ module Take
             value = sum
           when "textcontains"
             answer = question["answers"][a_ids.index(answered[0])]
-            value = self.score_textContains(answer["value"],answer["text_eval"],post["text"][answered[0]])
+            #value = self.score_textContains(answer["value"],answer["text_eval"],post["text"][answered[0]])
+            te = Take::TextEval::Contains.new(answer["text_eval"])
+            value = te.score(post["text"][answered[0]],answer["value"])
           when "textnumeric"
             answer = question["answers"][a_ids.index(answered[0])]
-            value = self.score_textNumeric(answer["value"],answer["text_eval"],post["text"][answered[0]])
+            #value = self.score_textNumeric(answer["value"],answer["text_eval"],post["text"][answered[0]])
+            ne = Take::TextEval::Numeric.new(answer["text_eval"])
+            value = ne.score(post["text"][answered[0]],answer["value"])
           else
             value = max
           end

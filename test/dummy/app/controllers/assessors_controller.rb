@@ -5,7 +5,7 @@ class AssessorsController < ApplicationController
   
   def index
     @assessors = Assessor.all
-    @hash = Take::Assessment.publish(2)
+    @assmnt_hash = Take::Assessment.publish(2)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @assessors }
@@ -17,7 +17,7 @@ class AssessorsController < ApplicationController
   def show
     @assessor = Assessor.find(params[:id])
     if @assessor.publish_json
-      @hash = Take.safe_json_decode( @assessor.publish_json )      
+      @assmnt_hash = Take.safe_json_decode( @assessor.publish_json )      
     end
     respond_to do |format|
       format.html # show.html.erb
@@ -101,9 +101,9 @@ class AssessorsController < ApplicationController
     #@json = ActiveSupport::JSON.decode(@assessment.publish)
     @assessor = Assessor.find(params[:id])
     if @assessor.publish_json
-      @hash = Take.safe_json_decode( @assessor.publish_json )      
+      @assmnt_hash = Take.safe_json_decode( @assessor.publish_json )      
     end
-    results = Take::Assess.score_assessment(@hash,params[:post])
+    results = Take::Assess.score_assessment(@assmnt_hash,params[:post])
     
     session[:post] = {} unless session[:post]
     session[:post][params[:id]] = params[:post]

@@ -1,10 +1,11 @@
 require "take/engine"
 require "take/render_helper"
+require "take/text_eval"
 
 module Take
     
   class Post
-    attr_accessor :answer, :all, :text, :other, :scores
+    attr_accessor :answer, :all, :text, :other, :scores, :all
 
 
     def initialize(attributes = {})
