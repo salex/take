@@ -1,5 +1,5 @@
 <%= form_for(@question) do |f| %>
-
+<% texteval = (@question.score_method == "TextContains") || (@question.score_method == "TextNumeric")%>
 <div class="index-list">
   <div class="actions">
     <%= f.submit %><span><%= @question.question_text%>
@@ -8,10 +8,9 @@
   <table>
     <tr class="list-header">
         <th>Seq</th>
-        <th>Answer Text/Short Name</th>
+        <th>Answer Text/Short Name<%= texteval ? "/Text Eval" : ""%></th>
         <th>Value</th>
         <th>&check; Other Question</th>
-        <th>Text Eval</th>
         <th>Delete</th>
     </tr>
     <% alt = true%>
@@ -27,18 +26,16 @@
           <%= builder.text_field :sequence ,:size => 2 %>
         </td>
         <td>
-          Ans: <%= builder.text_field :answer_text, :size => 50 %> <br />Short Name: <%= builder.text_field :short_name, :size => 20 %>  
+          <span class="index-label">Answer:</span> <%= builder.text_field :answer_text, :size => 50 %> <br />
+          <span class="index-label">Short Name:</span> <%= builder.text_field :short_name, :size => 20 %>  
           
         </td>
         <td>
           <%= builder.text_field :value, :size => 2 %>  
         </td>
         <td>
-          <%= builder.check_box :requires_other %> <%= builder.text_field :other_question, :size => 20 %>  
+          <%= builder.check_box :requires_other %> <%= builder.text_field :other_question, :size => 40 %>  
         </td>
-        <td>
-          <%= builder.text_field :text_eval, :size => 15 %> 
-        </td> 
         <td>
           <span > 
             <%if !builder.object.answer_text.nil? %>
@@ -50,7 +47,23 @@
           </span>
       </td>
     </tr>
+    <% if  texteval %>
+    <tr <%=raw alt ? "class=\"alt\"" : ""%>>
+      <td>&nbsp;</td>
+      <td colspan="4"><span class="index-label">Text Eval:</span>
+        <%= builder.text_field :text_eval, :size => 110 %>
+        <% if @question.score_method == "TextContains" %>
+          <%= link_to_function "Edit Helper",nil,"data-behavior" => "edit_contains", :id => "eval_#{builder.object.sequence}", :class => "edit-button"%>
+          <%= render_text_contains(builder.object.text_eval,builder.object.sequence)%>
+        <% else %>
+        <%= link_to_function "Edit Helper",nil,"data-behavior" => "edit_numeric", :id => "eval_#{builder.object.sequence}", :class => "edit-button"%>
+          <%= render_text_numeric(builder.object.text_eval,builder.object.sequence)%>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
   <% end %>
   </table>
 </div>
 <% end %>
+  

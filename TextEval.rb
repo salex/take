@@ -102,7 +102,7 @@ module TextEval
   end
 end
 
-t = TextEval::Contains.new("(quick|brown|lazy)&fox&back&!(the|jump|dog)::(quick|brown|lazy)>>20&fox>>40&back>>40&dog>>-50&the>>-75")
+t = Take::TextEval::Contains.new("(quick|brown|lazy)&fox&back&!(the|jump|dog)::(quick|brown|lazy)>>20&fox>>40&back>>40&dog>>-50&the>>-75")
 t.score("quick fox back brown lazy dog",10)
 
 n = TextEval::Numeric.new("3.1416::.000025::.0001>>80::.001>>20")

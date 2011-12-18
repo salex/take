@@ -1,10 +1,12 @@
 module Take  
   module TextEval
     class Numeric
+      attr_reader :sections, :match, :deltas
+      
       def initialize(text)
         @sections = text.split("::")
-        @match = @sections[0].to_f
-        @deltas = {0.0 => 100.0}
+        @match = @sections[0].to_f if @sections.length > 0
+        @deltas = {0.0 => 100.0} 
         if @sections.length > 1
           1.upto(@sections.length - 1) do |i|
             t = @sections[i].split(">>")
@@ -35,6 +37,8 @@ module Take
     end
 
     class Contains
+      attr_reader :sections, :match, :partial
+      
       def initialize(text)
         @sections = text.split("::")
         @partial = @sections.length > 1 ? @sections[1] : nil

@@ -16,3 +16,6 @@ gem "jquery-rails"
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem "jquery-rails"
+gem 'sass-rails', "~> 3.1.0.rc"
+gem 'coffee-script'
+

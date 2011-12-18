@@ -1,0 +1,132 @@
+@import 'reset';
+@import 'size';
+
+
+
+$theme-color-0: #000000;
+$theme-color-1: #110000;
+$theme-color-2: #221111;
+$theme-color-3: #332222;
+$theme-color-4: #443333;
+$theme-color-5: #554444;
+$theme-color-6: #665555;
+$theme-color-7: #776666;
+$theme-color-8: #887777;
+$theme-color-9: #998888;
+$theme-color-a: #aa9999;
+$theme-color-b: #bbaaaa;
+$theme-color-c: #ccbbbb;
+$theme-color-d: #ddcccc;
+$theme-color-e: #eee7e7;
+$theme-color-f: #fff7f7;
+
+
+.test-color-0 {background:$theme-color-0;}
+.test-color-1 {background:$theme-color-1;}
+.test-color-2 {background:$theme-color-2;}
+.test-color-3 {background:$theme-color-3;}
+.test-color-4 {background:$theme-color-4;}
+.test-color-5 {background:$theme-color-5;}
+.test-color-6 {background:$theme-color-6;}
+.test-color-7 {background:$theme-color-7;}
+.test-color-8 {background:$theme-color-8;}
+.test-color-9 {background:$theme-color-9;}
+.test-color-a {background:$theme-color-a;}
+.test-color-b {background:$theme-color-b;}
+.test-color-c {background:$theme-color-c;}
+.test-color-d {background:$theme-color-d;}
+.test-color-e {background:$theme-color-e;}
+.test-color-f {background:$theme-color-f;}
+
+
+
+body { background: $theme-color-d; color: black; font-size: 10pt; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+p { line-height: 1.2em; }
+
+h1 { font-size: 1.6em; font-weight:bold;}
+
+h2 { font-size: 1.4em; font-weight:bold;}
+
+h3 { font-size: 1.2em; font-weight:bold;}
+
+h4 { font-size: 1.1em; font-weight:bold;}
+
+h5 { font-size: 1em; font-weight:bold;}
+
+code { font-family: monaco; }
+
+ul {margin: 0.5em 0.5em;}
+li {margin: 0 1em;}
+
+/*
+#000000
+#001100
+#112211
+#223322
+#334433
+#445544
+#556655
+#667766
+#778877
+#889988
+#99aa99
+#aabbaa
+#bbccbb
+#ccddcc
+#ddeedd
+#eeffee
+7
+$theme-color-0: #000000;
+$theme-color-1: #110000;
+$theme-color-2: #220707;
+$theme-color-3: #331717;
+$theme-color-4: #442727;
+$theme-color-5: #553737;
+$theme-color-6: #664747;
+$theme-color-7: #775757;
+$theme-color-8: #886767;
+$theme-color-9: #997777;
+$theme-color-a: #aa8787;
+$theme-color-b: #bb9797;
+$theme-color-c: #cca7a7;
+$theme-color-d: #ddb7b7;
+$theme-color-e: #eec7c7;
+$theme-color-f: #ffd7d7;
+
+$theme-color-0: #000000;
+$theme-color-1: #001100;
+$theme-color-2: #072207;
+$theme-color-3: #173317;
+$theme-color-4: #274427;
+$theme-color-5: #375537;
+$theme-color-6: #476647;
+$theme-color-7: #577757;
+$theme-color-8: #678867;
+$theme-color-9: #779977;
+$theme-color-a: #87aa87;
+$theme-color-b: #97bb97;
+$theme-color-c: #a7cca7;
+$theme-color-d: #b7ddb7;
+$theme-color-e: #c7eec7;
+$theme-color-f: #d7ffd7;
+
+$theme-color-0: #000000;
+$theme-color-1: #001111;
+$theme-color-2: #072222;
+$theme-color-3: #173333;
+$theme-color-4: #274444;
+$theme-color-5: #375555;
+$theme-color-6: #476666;
+$theme-color-7: #577777;
+$theme-color-8: #678888;
+$theme-color-9: #779999;
+$theme-color-a: #87aaaa;
+$theme-color-b: #97bbbb;
+$theme-color-c: #a7cccc;
+$theme-color-d: #b7dddd;
+$theme-color-e: #c7eeee;
+$theme-color-f: #d7ffff;
+
+
+*/
