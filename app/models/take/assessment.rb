@@ -29,7 +29,10 @@ module Take
             end
           end
         end
-        if ((scoreMethod == "sum")  and ((ansType == "checkbox") or (ansType == "select-multiple")))
+        if ((scoreMethod == "sum")  and ((ansType == "checkbox") || (ansType == "select-multiple")))
+          maxRaw += sumQues
+          maxWeighted += (sumQues * weight)
+        elsif ((scoreMethod == "textcontains") || (scoreMethod == "textnumeric"))
           maxRaw += sumQues
           maxWeighted += (sumQues * weight)
         else
