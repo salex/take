@@ -1,14 +1,13 @@
 
 <h1>Listing assessors</h1>
 
+<div class="index-list">
 <table>
   <tr>
     <th>Assessment</th>
     <th>Version</th>
     <th>Publish json</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Actions</th>
   </tr>
 
 <% @assessors.each do |assessor| %>
@@ -16,12 +15,13 @@
     <td><%= assessor.assessment_id %></td>
     <td><%= assessor.version %></td>
     <td><%= !assessor.publish_json.nil? %></td>
-    <td><%= link_to 'Show', assessor %></td>
-    <td><%= link_to 'Edit', edit_assessor_path(assessor) %></td>
-    <td><%= link_to 'Destroy', assessor, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', assessor %>
+    <%= link_to 'Edit', edit_assessor_path(assessor) %>
+    <%= link_to 'Destroy', assessor, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
+</div>
 <br />
 <%= link_to 'New Assessor', new_assessor_path %>
 

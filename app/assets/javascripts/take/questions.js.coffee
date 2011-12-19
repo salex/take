@@ -84,7 +84,6 @@ $(document).ready ->
             value = "(" + tmp.join("|") + ")"
           else
             value = "(" + value + ")"
-
         if y
           value = "!" + value
         value += ">>#{perc}"

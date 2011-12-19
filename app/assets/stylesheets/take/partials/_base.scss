@@ -21,26 +21,26 @@ $theme-color-e: #eee7e7;
 $theme-color-f: #fff7f7;
 
 
-.test-color-0 {background:$theme-color-0;}
-.test-color-1 {background:$theme-color-1;}
-.test-color-2 {background:$theme-color-2;}
-.test-color-3 {background:$theme-color-3;}
-.test-color-4 {background:$theme-color-4;}
-.test-color-5 {background:$theme-color-5;}
-.test-color-6 {background:$theme-color-6;}
-.test-color-7 {background:$theme-color-7;}
-.test-color-8 {background:$theme-color-8;}
-.test-color-9 {background:$theme-color-9;}
-.test-color-a {background:$theme-color-a;}
-.test-color-b {background:$theme-color-b;}
-.test-color-c {background:$theme-color-c;}
-.test-color-d {background:$theme-color-d;}
-.test-color-e {background:$theme-color-e;}
-.test-color-f {background:$theme-color-f;}
+.test-color-0 {background-color:$theme-color-0;color:$theme-color-f;}
+.test-color-1 {background-color:$theme-color-1;color:$theme-color-e;}
+.test-color-2 {background-color:$theme-color-2;color:$theme-color-d;}
+.test-color-3 {background-color:$theme-color-3;color:$theme-color-c;}
+.test-color-4 {background-color:$theme-color-4;color:$theme-color-b;}
+.test-color-5 {background-color:$theme-color-5;color:$theme-color-a;}
+.test-color-6 {background-color:$theme-color-6;color:$theme-color-9;}
+.test-color-7 {background-color:$theme-color-7;color:$theme-color-8;}
+.test-color-8 {background-color:$theme-color-8;color:$theme-color-7;}
+.test-color-9 {background-color:$theme-color-9;color:$theme-color-6;}
+.test-color-a {background-color:$theme-color-a;color:$theme-color-5;}
+.test-color-b {background-color:$theme-color-b;color:$theme-color-4;}
+.test-color-c {background-color:$theme-color-c;color:$theme-color-3;}
+.test-color-d {background-color:$theme-color-d;color:$theme-color-2;}
+.test-color-e {background-color:$theme-color-e;color:$theme-color-1;}
+.test-color-f {background-color:$theme-color-f;color:$theme-color-0;}
 
 
 
-body { background: $theme-color-d; color: black; font-size: 10pt; font-family: Verdana, Arial, Helvetica, sans-serif; }
+body { background: $theme-color-e; color: black; font-size: 10pt; font-family: Verdana, Arial, Helvetica, sans-serif; }
 
 p { line-height: 1.2em; }
 
@@ -58,6 +58,29 @@ code { font-family: monaco; }
 
 ul {margin: 0.5em 0.5em;}
 li {margin: 0 1em;}
+
+#container { background: $theme-color-c; width: 960px; margin: auto;position:relative}
+
+#header { background: $theme-color-9; 
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    border-bottom: 2px solid; 
+    font: small-caps 40px/40px "Times New Roman", serif; color: $theme-color-2; 
+    text-align: center; 
+}
+
+#navbar { background: green; padding: 2px; }
+
+
+#content { padding: 1em; background: transparent;}
+
+#content fieldset { position: relative; 
+    margin-right: auto; margin-left: auto; margin-top: 4px; margin-bottom: 4px; background: $theme-color-f; padding: 4px;border: 1px solid; border-color: $theme-color-9;
+    border-radius: 5px;  
+    -moz-border-radius: 5px;  
+    -webkit-border-radius: 5px;  
+     }
+#content fieldset legend { position: relative; color: $theme-color-5;  background-color:$theme-color-d; font-size: 1em; border: 1px solid; border-color:$theme-color-f; margin-left: 10px; padding: 2px 4px; font-weight: bold; }
 
 /*
 #000000

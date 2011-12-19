@@ -5,8 +5,8 @@ module Take
       @obj = Take::TextEval::Contains.new(eval_text)
       @seq = seq
       result =  <<-HERE
-      <div id="eval_#{@seq}_div" style="display:none" class="assmnt-questions">
-        <div class="assmnt-group-header">
+      <div id="eval_#{@seq}_div" style="display:none" class="take-questions">
+        <div class="take-group-header">
           Text Contains Evaluation
         </div>
         #{contains_format}
@@ -24,8 +24,8 @@ module Take
       @obj = Take::TextEval::Numeric.new(eval_text)
       @seq = seq
       result =  <<-HERE
-      <div id="eval_#{@seq}_div" style="display:none" class="assmnt-questions">
-        <div class="assmnt-group-header">
+      <div id="eval_#{@seq}_div" style="display:none" class="take-questions">
+        <div class="take-group-header">
           Numeric Evaluation
         </div>
         #{numeric_format}
@@ -41,11 +41,11 @@ module Take
     def numeric_format
       deltas = @obj.deltas.keys
       result =  <<-HERE
-      <div class="assmnt-question">
-        <div class="assmnt-question-instructions">
+      <div class="take-question">
+        <div class="take-question-instructions">
           Match instruction
         </div>
-        <div class="assmnt-answers-inline">
+        <div class="take-answers-inline">
           <table>
             <tr>
               <th>Exact Match<input type="text"  value="#{@obj.match}" id="numeric_match_#{@seq}" size="30" /></th>
@@ -56,14 +56,14 @@ module Take
           </table>
         </div>
       </div>
-      <div class="assmnt-question">
-        <div class="assmnt-question-instructions">
+      <div class="take-question">
+        <div class="take-question-instructions">
           Delta instruction
         </div>
       HERE
       1.upto(deltas.length - 1 ) do |i|
         result +=  <<-HERE
-        <div class="assmnt-answers-inline">
+        <div class="take-answers-inline">
           <table>
             <tr>
               <th>Delta&#177;<input class="seq_#{@seq}_delta" type="text" value="#{deltas[i]}" id="numeric_delta_#{@seq}_#{i}" size="10" /></th>
@@ -75,7 +75,7 @@ module Take
       end
       deltas.length.upto(deltas.length + 1 ) do |i|
         result +=  <<-HERE
-        <div class="assmnt-answers-inline">
+        <div class="take-answers-inline">
           <table>
             <tr>
               <th>Delta&#177;<input class="seq_#{@seq}_delta" type="text" value="" id="numeric_delta_#{@seq}_#{i}" size="10" /></th>
@@ -97,14 +97,14 @@ module Take
       matchands = @obj.match ? @obj.match.split('&') : []
       partialands = @obj.partial ? @obj.partial.split("&") : []
       result =  <<-HERE
-      <div class="assmnt-question">
-        <div class="assmnt-question-instructions">
+      <div class="take-question">
+        <div class="take-question-instructions">
           Match Instruction
         </div>
         #{match_ands(matchands)}
       </div>
-      <div class="assmnt-question">
-        <div class="assmnt-question-instructions">
+      <div class="take-question">
+        <div class="take-question-instructions">
           Patial Instruction
         </div>
         #{partial_ands(partialands)}
@@ -131,7 +131,7 @@ module Take
         end
         
         result +=  <<-HERE
-        <div class="assmnt-answers-inline">
+        <div class="take-answers-inline">
           <table>
             <tr>
             <td>Or <input type="checkbox" id="contain_or_#{@seq}_#{i}" value="or" #{ochecked} /></td>
@@ -144,7 +144,7 @@ module Take
       end
       match_ands.length.upto(match_ands.length + 1) do |i|
         result +=  <<-HERE
-        <div class="assmnt-answers-inline">
+        <div class="take-answers-inline">
           <table>
             <tr>
             <td>Or <input type="checkbox" id="contain_or_#{@seq}_#{i}" value="or"  /></td>
@@ -178,7 +178,7 @@ module Take
         end
         
         result +=  <<-HERE
-        <div class="assmnt-answers-inline">
+        <div class="take-answers-inline">
           <table>
             <tr>
             <td>Or <input type="checkbox" id="partial_or_#{@seq}_#{i}" value="or" #{ochecked} /></td>
@@ -192,7 +192,7 @@ module Take
       end
       partial_ands.length.upto(partial_ands.length + 1) do |i|
         result +=  <<-HERE
-        <div class="assmnt-answers-inline">
+        <div class="take-answers-inline">
           <table>
             <tr>
             <td>Or <input type="checkbox" id="partial_or_#{@seq}_#{i}" value="or"  /></td>

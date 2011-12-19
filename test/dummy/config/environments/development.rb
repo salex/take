@@ -24,8 +24,7 @@ Dummy::Application.configure do
 
   # Do not compress assets
   config.assets.compress = false
-  config.assets.compile = true
 
   # Expands the lines which load the assets
-  config.assets.debug = true
+  config.assets.debug = false
 end

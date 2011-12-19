@@ -8,9 +8,9 @@ module Take
   
     def render_assessment
       result =  <<-HERE
-      <div id="assmnt">
+      <div id="take">
         #{h_make_instruction(@assmnt["instructions"])}
-        <div class="assmnt-questions">
+        <div class="take-questions">
           #{h_make_questions}
         </div>
       </div>
@@ -22,7 +22,7 @@ module Take
     
     def h_make_instruction(text)
       result = <<-HERE
-      <div class="assmnt-instructions">
+      <div class="take-instructions">
         #{text}
       </div>
       HERE
@@ -46,7 +46,7 @@ module Take
     
     def h_make_group_header(text)
       result = <<-HERE
-      <div class="assmnt-group-header">
+      <div class="take-group-header">
         #{text}
       </div>
       HERE
@@ -57,14 +57,14 @@ module Take
       result = ""
       result << 
       result << <<-HERE
-      <div class="assmnt-question">
+      <div class="take-question">
         #{h_make_question_instructions(question["instructions"]) unless question["instructions"].blank?}
         <div id="err_qa_#{question["id"]}">
         
-          <div class="assmnt-question-text">
+          <div class="take-question-text">
             #{question["question_text"]}
           </div>
-          <div class="assmnt-answers">
+          <div class="take-answers">
             <table>
               #{h_make_list_answers(question)}
             </table>
@@ -81,13 +81,13 @@ module Take
       result = ""
       result << h_make_question_instructions(question["instructions"]) unless question["instructions"].blank?
       result << <<-HERE
-      <div class="assmnt-question">
-        <div class="assmnt-answers-inline">
+      <div class="take-question">
+        <div class="take-answers-inline">
           <div id="err_qa_#{question["id"]}">
             <table>
               <tr>
                 #{h_make_inline_answers(question)}
-                <td class="assmnt-question-text">
+                <td class="take-question-text">
                   <div >
                     #{question["question_text"]}
                     #{h_make_other_question(question)}
@@ -104,7 +104,7 @@ module Take
     
     def h_make_question_instructions(text)
       result = <<-HERE
-      <div class="assmnt-question-instructions">
+      <div class="take-question-instructions">
         #{text}
       </div>
       HERE
@@ -145,7 +145,7 @@ module Take
             text, exists, other = h_getAnswerData(answer["id"].to_s)
             dsp = exists ? "block" : "none"
             result << <<-HERE
-            <div class="assmnt-other-question" id="other_qa_#{question["id"]}_#{answer["id"]}" style="display:#{dsp}">
+            <div class="take-other-question" id="other_qa_#{question["id"]}_#{answer["id"]}" style="display:#{dsp}">
             #{text_field_tag("post[other][#{answer["id"].to_s}]",other, :id => "text_qa_#{question["id"]}_#{answer["id"]}", :disabled => !exists)} 
             #{answer["answer_text"]}: #{answer["other_question"]}
             </div>
@@ -157,7 +157,7 @@ module Take
           text, exists, other = h_getAnswerData(ans["id"].to_s)
           dsp = exists ? "block" : "none"
           result = <<-HERE
-            <div class="assmnt-other-question" id="other_qa_#{question["id"]}_#{ans["id"]}" style="display:#{dsp}">
+            <div class="take-other-question" id="other_qa_#{question["id"]}_#{ans["id"]}" style="display:#{dsp}">
             #{text_field_tag("post[other][#{ans["id"].to_s}]",other, :id => "text_qa_#{question["id"]}_#{ans["id"]}", :disabled => !exists)} 
             #{ans["other_question"]}
             </div>

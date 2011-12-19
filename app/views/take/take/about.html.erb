@@ -2,20 +2,49 @@ hello about take
 
 <%= link_to "Assessments", assessments_path%>
 
-<div class="test-color-0"> test-color-0: #000000</div>
-<div class="test-color-1"> test-color-1: #001100</div>
-<div class="test-color-2"> test-color-2: #112211</div>
-<div class="test-color-3"> test-color-3: #223322</div>
-<div class="test-color-4"> test-color-4: #334433</div>
-<div class="test-color-5"> test-color-5: #445544</div>
-<div class="test-color-6"> test-color-6: #556655</div>
-<div class="test-color-7"> test-color-7: #667766</div>
-<div class="test-color-8"> test-color-8: #778877</div>
-<div class="test-color-9"> test-color-9: #889988</div>
-<div class="test-color-a"> test-color-a: #99aa99</div>
-<div class="test-color-b"> test-color-b: #aabbaa</div>
-<div class="test-color-c"> test-color-c: #bbccbb</div>
-<div class="test-color-d"> test-color-d: #ccddcc</div>
-<div class="test-color-e"> test-color-e: #ddeedd</div>
-<div class="test-color-f"> test-color-f: #eeffee</div>
+<div class="test-color-0"> test-color-0: #000000;</div>
+<div class="test-color-1"> test-color-1: #110000;</div>
+<div class="test-color-2"> test-color-2: #221111;</div>
+<div class="test-color-3"> test-color-3: #332222;</div>
+<div class="test-color-4"> test-color-4: #443333;</div>
+<div class="test-color-5"> test-color-5: #554444;</div>
+<div class="test-color-6"> test-color-6: #665555;</div>
+<div class="test-color-7"> test-color-7: #776666;</div>
+<div class="test-color-8"> test-color-8: #887777;</div>
+<div class="test-color-9"> test-color-9: #998888;</div>
+<div class="test-color-a"> test-color-a: #aa9999;</div>
+<div class="test-color-b"> test-color-b: #bbaaaa;</div>
+<div class="test-color-c"> test-color-c: #ccbbbb;</div>
+<div class="test-color-d"> test-color-d: #ddcccc;</div>
+<div class="test-color-e"> test-color-e: #eee7e7;</div>
+<div class="test-color-f"> test-color-f: #fff7f7;</div>
+
+<%
+  red = 255
+  green = red - 17
+  blue = red - 17
+  red_delta = 17
+  green_delta = red - green  #(green / 16) 
+  blue_delta = red - blue 
+  ra = []
+  ga = []
+  ba = []
+  15.downto(0) do |i|
+    ra[i] = red
+    red -= red_delta
+    ga[i] = green 
+    green -= green_delta
+    green = green < 0 ? 0 : green
+    ba[i] = blue 
+    blue -= blue_delta
+    blue = blue < 0 ? 0 : blue
+  end
+%>
+<%= ra.inspect %>
+
+<% 15.downto(0) do |i| %>
+<div style="background-color:rgb(<%= ra[i] %>, <%= ga[i] %>,<%= ba[i] %>);color:rgb(<%= ra[-i]  %>, <%= ga[-i] %>,<%= ba[-i] %>)"> r <%= ra[i].to_s(16) %> g <%= ga[i].to_s(16) %> b <%= ba[i].to_s(16) %></div>
+
+<% end %>
+
 

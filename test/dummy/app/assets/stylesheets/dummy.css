@@ -22,20 +22,20 @@
 #content fieldset legend { position: relative; color: #003366;  background-color:#e7ffe7; font-size: 1em; border: 1px solid; border-color:#99dd99; margin-left: 10px; padding: 2px 4px; font-weight: bold; }
 
 
-#assmnt {font-family: arial,helvetica,sans-serif;font-size:1.1em;margin-left:10px;}
-.assmnt-instructions {font-weight:normal;font-style:italic;}
-.assmnt-questions {margin-left:1em;padding:4px 0 4px;}
-.assmnt-question {margin-left:0.5em;padding:4px 0 4px;border-top:dotted 1px #99dd99 ;}
-.assmnt-question-instructions {font-weight:normal;font-style:italic;}
-.assmnt-question-header {background: #f8f8f8; font-weight:bold;}
-.assmnt-other-question {font-weight:normal;font-style:italic;font-size:.8em;display:none;}
+#take {font-family: arial,helvetica,sans-serif;font-size:1.1em;margin-left:10px;}
+.take-instructions {font-weight:normal;font-style:italic;}
+.take-questions {margin-left:1em;padding:4px 0 4px;}
+.take-question {margin-left:0.5em;padding:4px 0 4px;border-top:dotted 1px #99dd99 ;}
+.take-question-instructions {font-weight:normal;font-style:italic;}
+.take-question-header {background: #f8f8f8; font-weight:bold;}
+.take-other-question {font-weight:normal;font-style:italic;font-size:.8em;display:none;}
 
-.assmnt-group-header { font-weight:bold;font-style:italic;}
-.assmnt-annotate {font-weight:normal;font-style:italic;font-size:.8em;}
-.assmnt-answers {margin-left:0.5em;}
-.assmnt-answers-inline td, .assmnt-answers td {padding-left:0.5em;}
-.assmnt-answers-inline th {border: dotted 1px #abc; background: #eee;white-space:nowrap; padding:1px 4px;}
-.assmnt-question-text { font-weight:bold;}
+.take-group-header { font-weight:bold;font-style:italic;}
+.take-annotate {font-weight:normal;font-style:italic;font-size:.8em;}
+.take-answers {margin-left:0.5em;}
+.take-answers-inline td, .take-answers td {padding-left:0.5em;}
+.take-answers-inline th {border: dotted 1px #abc; background: #eee;white-space:nowrap; padding:1px 4px;}
+.take-question-text { font-weight:bold;}
 
 
 /* for demo purposes */

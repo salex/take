@@ -1,9 +1,10 @@
 /*
-  Place all the styles related to the take.
+  Place all the styles related to take.
   They will automatically be included in application.css.
 */
 
 @import 'partials/base';
+@import 'partials/layout';
 
 /*
   Place all the styles related to the matching controller here.
@@ -11,27 +12,6 @@
 */
 
 
-#header { background: $theme-color-9; 
-    padding-top: 10px; 
-    padding-bottom: 10px; 
-    border-bottom: 2px solid; 
-    font: small-caps 40px/40px "Times New Roman", serif; color: $theme-color-2; 
-    text-align: center; 
-}
-
-#navbar { background: green; padding: 2px; }
-
-#container { background: $theme-color-c; width: 960px; margin: auto;position:relative}
-
-#content { padding: 1em; background: transparent;}
-
-#content fieldset { position: relative; 
-    margin-right: auto; margin-left: auto; margin-top: 4px; margin-bottom: 4px; background: $theme-color-f; padding: 4px;border: 1px solid; border-color: $theme-color-9;
-    border-radius: 5px;  
-    -moz-border-radius: 5px;  
-    -webkit-border-radius: 5px;  
-     }
-#content fieldset legend { position: relative; color: $theme-color-5;  background-color:$theme-color-d; font-size: 1em; border: 1px solid; border-color:$theme-color-d; margin-left: 10px; padding: 2px 4px; font-weight: bold; }
 
 
 
@@ -46,18 +26,15 @@
 .p60 {width:58%;}
 .p40 {width:38%;}
 
-/* line 15, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
 .f-left {
   float: left;
 }
 
-/* line 17, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
 .f-right {
   float: right;
   padding: 0;
 }
 
-/* line 19, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
 .f-clear {
   clear: both;
   height: 0;
@@ -65,49 +42,42 @@
 }
 
 
-/* line 130, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
 .links a, #content a {
   text-decoration: none;
   color: blue;
   font-size: 0.9em;
 }
 
-/* line 131, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
 .links a:hover, #content a:hover {
   color: red !important;
 }
 
-/* line 223, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
 .index-list table {
   width: 100%;
+  td, th {
+    padding: 2px 4px;
+    border: dotted 1px $theme-color-a;
+  };
+  tr {
+    background: white;
+  };
+  tr.alt {
+    background: $theme-color-f;
+  };
+  tr.list-header {
+    background: $theme-color-d;
+    border: 1px solid $theme-color-b;
+  };
+  tr.list-header td, tr.list-header th {
+    font-weight: bold;
+  };
+  
 }
 
-/* line 224, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
-.index-list td, .index-list th {
-  padding: 2px 4px;
-  border: dotted 1px #40b040;
-}
 
-/* line 225, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
-.index-list tr {
-  background: white;
-}
 
-/* line 226, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
-.index-list tr.alt {
-  background: $theme-color-f;
-}
 
-/* line 227, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
-.index-list tr.list-header {
-  background: $theme-color-d;
-  border: 1px solid $theme-color-b;
-}
 
-/* line 228, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
-.index-list tr.list-header td, .index-list tr.list-header th {
-  font-weight: bold;
-}
 .index-label {
   display: inline-block;
   width:8em;
@@ -160,7 +130,6 @@
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
 }
-/* line 27, /Library/Rails/ngg/app/assets/stylesheets/basic.css.scss */
 .actions a {
   color: #fff!important;
 }
@@ -185,18 +154,18 @@ input.validation-passed, textarea.validation-passed, select.validation-failed { 
 
 
 
-#assmnt {font-family: arial,helvetica,sans-serif;font-size:1.1em;margin-left:10px;}
-.assmnt-instructions {font-weight:normal;font-style:italic;}
-.assmnt-questions {margin-left:1em;padding:4px 0 4px;}
-.assmnt-question {margin-left:0.5em;padding:4px 0 4px;border-top:dotted 1px #99dd99 ;}
-.assmnt-question-instructions {font-weight:normal;font-style:italic;}
-.assmnt-question-header {background: #f8f8f8; font-weight:bold;}
-.assmnt-other-question {font-weight:normal;font-style:italic;font-size:.8em;display:none;}
+#take {font-family: arial,helvetica,sans-serif;font-size:1.1em;margin-left:10px;}
+.take-instructions {font-weight:normal;font-style:italic;}
+.take-questions {margin-left:1em;padding:4px 0 4px;}
+.take-question {margin-left:0.5em;padding:4px 0 4px;border-top:dotted 1px $theme-color-d ;}
+.take-question-instructions {font-weight:normal;font-style:italic;}
+.take-question-header {background: #f8f8f8; font-weight:bold;}
+.take-other-question {font-weight:normal;font-style:italic;font-size:.8em;display:none;}
 
-.assmnt-group-header { font-weight:bold;font-style:italic;}
-.assmnt-annotate {font-weight:normal;font-style:italic;font-size:.8em;}
-.assmnt-answers {margin-left:0.5em;}
-.assmnt-answers-inline table {width:auto;}
-.assmnt-answers-inline td, .assmnt-answers td {padding-left:0.5em!important;}
-.assmnt-answers-inline th {border: dotted 1px #abc!important; background: #eee!important;white-space:nowrap!important; padding:1px 4px!important;}
-.assmnt-question-text { font-weight:bold;}
+.take-group-header { font-weight:bold;font-style:italic;}
+.take-annotate {font-weight:normal;font-style:italic;font-size:.8em;}
+.take-answers {margin-left:0.5em;}
+.take-answers-inline table {width:auto;}
+.take-answers-inline td, .take-answers td {padding-left:0.5em!important;}
+.take-answers-inline th {border: dotted 1px $theme-color-b!important; background: #eee!important;white-space:nowrap!important; padding:1px 4px!important;}
+.take-question-text { font-weight:bold;}
