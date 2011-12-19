@@ -1,0 +1,5 @@
+TODO
+  mainly things for install
+    need to include the take.js.coffee and take.css (take selector) in application
+    
+  textform scoring seems broke

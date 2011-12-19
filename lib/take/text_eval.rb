@@ -57,13 +57,16 @@ module Take
   
       def exact_score(answer,value)
         ands =  and_splits(@match)
+        #puts "aaaaaaaaaaa #{ands.inspect}"
         ok = true
         ands.each do |elem|
           eq = true
-          if (elem[0..1] == "!") 
+          if (elem[0..0] == "!") 
             eq = false
             elem = elem[1..-1]
           end
+          #puts "bbbbbbbbbb #{elem} #{eq} #{ok} #{answer}"
+          
           if ok
             re = Regexp.new(elem,true)
             elem_ok = !( re =~ answer).nil? # it is there or not
@@ -81,7 +84,7 @@ module Take
         ands =  and_splits(@partial)
         ands.each do |elem|
           eq = true
-          if (elem[0..1] == "!") 
+          if (elem[0..0] == "!") 
             eq = false
             elem = elem[1..-1]
           end
