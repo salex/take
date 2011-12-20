@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111031091617) do
+ActiveRecord::Schema.define(:version => 20111220131535) do
 
   create_table "assessors", :force => true do |t|
     t.integer  "assessment_id"
@@ -73,5 +73,15 @@ ActiveRecord::Schema.define(:version => 20111031091617) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "take_stashes", :force => true do |t|
+    t.string   "session_id"
+    t.text     "session"
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "take_stashes", ["session_id"], :name => "index_take_stashes_on_session_id"
 
 end

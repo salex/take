@@ -84,11 +84,14 @@ module Take
       end
     end
     def display
-      reset_session if params[:reset]
+      @stash = Stash.get(session)
+      reset_stash if params[:reset] # for testing only
       @assessment = Assessment.find(params[:id])
-      if session.has_key?("post") && session["post"].has_key?(params[:id])
-       @post = session["post"][params[:id]]
-      end
+      #if session.has_key?("post") && session["post"].has_key?(params[:id])
+       data = @stash.get_data
+       logger.info "hhhhhhhhhhh #{data}"
+       @post = data[:post][params[:id]] ||= nil
+      #end
       
       #@json = ActiveSupport::JSON.decode(@assessment.publish)
       @assmnt_hash = Assessment.publish(params[:id])
@@ -99,11 +102,33 @@ module Take
       #@json = ActiveSupport::JSON.decode(@assessment.publish)
       @assmnt_hash = Assessment.publish(params[:id])
       results = Assess.score_assessment(@assmnt_hash,params[:post])
-      
-      session[:post] = {} unless session[:post]
-      session[:post][params[:id]] = params[:post]
+      set_stash
+      #session[:post] = {} unless session[:post]
+      #session[:post][params[:id]] = params[:post]
       #session["post"][params[:id]][:all] = all
       render :text => "Testing: post_obj =>  #{results.inspect}", :layout => true
+    end
+    
+    private
+    
+    def reset_stash
+      if @stash
+        @stash.delete
+        reset_session
+        @stash = Stash.get(session)
+      end
+      @stash
+    end
+    
+    def set_stash
+      stash = Stash.get(session)
+      data = stash.get_data 
+      data = data.nil? ? {} : data
+      data[:post] = {} unless data[:post]
+      logger.info "ssssssssss #{data.inspect} #{params[:id]} #{params[:post]}"
+      data[:post][params[:id]] = params[:post]
+      stash.data = data
+      stash.save
     end
   end
 end

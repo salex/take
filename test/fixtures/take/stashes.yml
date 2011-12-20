@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  session_id: 1
+  session: MyText
+  data: MyText
+
+two:
+  session_id: 1
+  session: MyText
+  data: MyText
