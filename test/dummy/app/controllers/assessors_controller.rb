@@ -87,28 +87,30 @@ class AssessorsController < ApplicationController
   
   def display
     reset_session if params[:reset]
+    @post = Assess.get_post(params[:id],session)
     @assessor = Assessor.find(params[:id])
     if @assessor.publish_json
       @assmnt_hash = Take.safe_json_decode( @assessor.publish_json )      
-    end
-    if session.has_key?("post") && session["post"].has_key?(params[:id])
-     @post = session["post"][params[:id]]
     end
   end
   
   def post
-    #@assessment = Assessment.find(params[:id])
-    #@json = ActiveSupport::JSON.decode(@assessment.publish)
     @assessor = Assessor.find(params[:id])
     if @assessor.publish_json
       @assmnt_hash = Take.safe_json_decode( @assessor.publish_json )      
     end
-    results = Take::Assess.score_assessment(@assmnt_hash,params[:post])
-    
-    session[:post] = {} unless session[:post]
-    session[:post][params[:id]] = params[:post]
-    #session["post"][params[:id]][:all] = all
+    results = Assess.score_assessment(@assmnt_hash,params[:post])
+    Assess.set_post(params[:id],params[:post],session)
     render :text => "Testing: post_obj =>  #{results.inspect}", :layout => true
   end
+    
+  private
+  
+  def reset_stash
+    stash = Assess.get(session)
+    stash.delete
+    reset_session
+  end
+  
   
 end
