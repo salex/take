@@ -8,19 +8,23 @@ module Take
     end
     
     def get_post(id)
-      data = self.get_data
+      hash = self.get_data
+      logger.info "GET POST   #{hash}"
       result = nil
-      if data && data.has_key?("post")
-        result = data["post"][id]
+      if hash && hash.has_key?("post")
+        result = hash["post"][id]
       end
       return result
     end
     
     def set_post(id,post)
       hash = self.get_data
+      logger.info "SET POST in   #{hash} #{post}"
+      
       hash = hash.nil? ? {} : hash
-      hash[:post] = {} unless hash[:post]
-      hash[:post][id] = post
+      hash["post"] = {} unless hash["post"]
+      hash["post"][id] = post
+      logger.info "SET POST out   #{hash}"
       self.data = hash
       self.save
     end
@@ -31,7 +35,11 @@ module Take
     end
     
     def set_data
+      logger.info "SET DATA 1   #{self.data}"
+      
       self.data = self.data.to_json
+      logger.info "SET DATA 2   #{self.data}"
+      
     end
     
     

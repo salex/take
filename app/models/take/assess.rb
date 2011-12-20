@@ -8,12 +8,7 @@ module Take
     
     def self.set_post(id,post,session)
       stash = Stash.get(session)
-      hash = stash.get_data
-      hash = hash.nil? ? {} : hash
-      hash[:post] = {} unless hash[:post]
-      hash[:post][id] = post
-      stash.data = hash
-      stash.save
+      stash.set_post(id,post)
     end
     
     def self.score_assessment(assmnt_hash,post)
