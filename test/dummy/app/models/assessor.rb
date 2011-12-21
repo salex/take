@@ -5,6 +5,6 @@ class Assessor < ActiveRecord::Base
   
   
   def get_published
-    self.publish_json = Take::Assessment.publish(self.assessment_id).to_json
+    self.publish_json = Assess.publish(self.assessment_id).to_json
   end
 end

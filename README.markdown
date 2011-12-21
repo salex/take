@@ -36,7 +36,7 @@ These are basically three CRUD tables build with a modified scaffold generator. 
 
 * Manage the CRUD process
 * Display the assessment in a form. The assessment\_helper method display\_assessment generates the html for the form.
-* Score the assessment. The assessments model method score\_assessments scores the post of the form.
+* Score the assessment. The assessments model score\_assessments method scores the post of the form(s) and returns a score object. It is up to the user of the engine to take what it needs out of the score object to suit their needs.
 
 There is some background information later in this ReadMe, but to use the engine, you need some kind of "Assessor" model that uses the Take engine and some place to store the results of the scoring.
 
@@ -74,16 +74,16 @@ There are numerous options on what types of questions and answers are displayed 
 	* max - the default method for checkboxes and multiple-selects where the score is based on the highest answer value checked.
 	* none - used to just gather answers but not score them.
 	* textContains - A scored text field that uses pattern matching to score the answer.
-	* textNumeric - A scored text field that contains a numeric answer.
+	* textNumeric - A scored text field that contains a scored numeric answer.
 	
 
 * requires_other - Each answer (except text or textarea) can generate a text box to gather additional information. For instance, selecting a "Completed high school with a diploma" answer could bring up an additional question to enter the name and location of the school.
-* answer_eval is used to score text answers and uses a regex scheme to score the text field.
+* text_eval is used to score text answers and uses a regex scheme to score the text field.
 * shortname - questions and answers have optional shortnames. While the answer.answer_text and question.question_text are used in the display action, a summary dump of the scored objects can be hard to read with long questions. In the summary dump, the short name will be used if it is not blank.
 * critical - A question can be considered critical if the answer fails to meet a minimum value on a question. In that case you failed the assessment - even if your score was high. This is used to screen out people if they do not conform to a job requirement (e.g., willing to work rotating shifts).
 * weight - the raw answer values can be weighted, meaning that some questions are more important than others. This is also optional and there are other ways of achieving the same outcome. (Answer values are floats.)
 
-### Installation (Rails 3.1 only)
+### Installation (Rails ~> 3.1 only)
 
 * Download/clone Take from github
 * bundle install # no other gems used
@@ -93,14 +93,14 @@ There are numerous options on what types of questions and answers are displayed 
 * rails s
 
 The rake db:seed uses JSON files to populate the tables. Not the fastest thing in the world, but seems to work. If you use PostgreSql, you may have to reset the ID counter since the import sets the IDs.
+
 ### Basic CRUD
 
 You can browse through the assessments, questions and answers and have a look around. There is a short menu bar and a basic CSS layout
-to help you get around.
+to help you get around. The application will come up in the dummy application and there are links to go between the dummy application and Take CRUD.
 
 The Show link for an assessment will have a "Test Assessment" link that uses the built-in display\_assessment and score\_assessmeent methods.
 
-You can Clone an assessment. Provided so the same assessment can be used, but with different scoring (see background).
 
 ### Assessments Background
 
@@ -126,17 +126,17 @@ Going back to your school days and taking tests, there were several kinds of tes
 * Choose One Multiple Choice - _you could at least guess!_
 * Choose Many Multiple Choice - _more than one answer?_
 
-The basic HTML form can handle all of these types:
+Basic HTML form can handle all of these types:
 
 * Composition/Essay - textarea
 * Completion - text input
 * Choose One Multiple Choice - radio button input or select
 * Choose Many Multiple Choice - checkbox input or multiple select
 
-Assessments was designed to handle three tasks:
+Assessments were designed to handle three tasks:
 
 * Building/Managing the assessment (assessments, questions, and answer) using a restful CRUD environment.
-* Displaying the assessment using an HTML form.
+* Displaying the assessment using an HTML form (helper call).
 * Scoring the assessment based on model attributes - many of which are defaulted or optional.
 
 While this approach greatly reduces the development effort in creating, displaying and scoring an assessment, there is still some work needed to adapt Assessments to your use.
@@ -145,7 +145,7 @@ While this approach greatly reduces the development effort in creating, displayi
 	* A relationship from that model to the assessment must be established
 	* This could include multiple assessments such as the job applicant application.
 * A place to store the scoring object.
-* Procedures to handle changes (questions added, deleted or values changed that affect previously scored assessments)
+* Procedures to handle changes (version, questions added, deleted or values changed that affect previously scored assessments)
 
 The last item is rather non-trivial. It is easy to re-score an assessment, but what to do with answers that are no longer used and new questions that were not available when the assessment was originally scored requires some thought. Testing your assessment before deploying is important. If you deploy the assessment and see a problem, correct the problem as early as possible. Misspelling is not important, just changes that affect scoring.
 
@@ -160,66 +160,54 @@ and optional items such as displaying additional questions if the answer is sele
 There are a few things to note:
 
 * Answers can be displayed inline or as a list
-* Assessments can have instructions
+* Assessments can have optional instructions and headers
 * Questions can have a group header (think - a 1 to 5 type survey questions)
 * An answer can trigger an additional question _Why is hard the best way?_
 * A text question can have multiple answers (think - HTML form)
 
 When this assessment is posted, a *scoring object* is created; you can use all or parts of the object to suit your needs. A dump of a scoring object follows:
 
-<img src="/images/dump.png" alt="" /> 
-
-	** See image in public/images/dump.png **
 
 The scoring object is at the bottom of the screen (post.inspect) and the top part is one way to display the results in a compressed, but readable display. Let's
 look a little closer at the scoring object.
 
-{% uvhighlight ruby %}
+	{% uvhighlight ruby %}
 
-{
-	:answers=>{"35"=>["155"], "36"=>["160"], "37"=>["164"], "38"=>["168", "golf"], 
-		"39"=>["169", "someone lost and someone won"],"40"=>["170", "171", "172"], 
-		"41"=>["174", "Alex", "175", "Steve", "176", "555-444-2323"], "42"=>["177"], 
-		"43"=>["182", "quick fox back"],"44"=>["183", "3.1415"], "45"=>["185"], 
-		"156"=>["721", "fox back", "722", "jumps", "723", "brown"]}, 
-	:all_answers=>[155, 160, 164, 168, 169, 170, 171, 172, 174, 175, 176, 177, 
-		182, 183, 185, 721, 722, 723], 
-	:failed=>[38], 
-	:answers_other=>{"164"=>"because", "177"=>"AH"}, 
-	:question_raw=>{"35"=>3.0, "36"=>1.0, "37"=>2.0, "38"=>0.0, "39"=>0, "40"=>12.0, 
-		"41"=>0, "42"=>0, "43"=>3.0, "44"=>2.0, "45"=>2.0, "156"=>3.0}, 
-	:total_raw=>28.0, 
-	:total_weighted=>39.0, 
-	:category=>"application.silly", 
-	:max_raw=>47.0, 
-	:max_weighted=>88.0, 
-	:assessment_id=>"6"
-}
-	
-{% enduvhighlight ruby %}
+	score_object => {"answer"=>{"35"=>["159"], "36"=>["160", "719"], "37"=>["165"], "38"=>["168"], "39"=>["169"], 
+	  "40"=>["170", "171", "172"], "42"=>["179"], "43"=>["182"], "44"=>["183", "724"], "45"=>["184"], "156"=>["721", "722", "723"]},        
+	  "other"=>{"719"=>"t"}, "text"=>{"168"=>"golf fish hunt", "169"=>"stuff happens", "182"=>"quick fox back", "183"=>"3.1416", 
+	  "724"=>"88.3", "721"=>"fox back", "722"=>"jumps", "723"=>"beown"}, 
+	  "scores"=>{"35"=>{"raw"=>10.0, "weighted"=>10.0}, "36"=>{"raw"=>2.0, "weighted"=>10.0}, "37"=>{"raw"=>3.0, "weighted"=>9.0}, 
+	  "38"=>{"raw"=>0.0, "weighted"=>0.0}, "39"=>{"raw"=>1.0, "weighted"=>1.0}, "40"=>{"raw"=>12.0, "weighted"=>12.0}, 
+	  "42"=>{"raw"=>3.0, "weighted"=>0.0}, "43"=>{"raw"=>10.0, "weighted"=>10.0}, "44"=>{"raw"=>3.6, "weighted"=>3.6}, "
+	  45"=>{"raw"=>1.0, "weighted"=>1.0}, "156"=>{"raw"=>2.0, "weighted"=>4.0}, "total"=>{"raw"=>47.6, "weighted"=>60.6},
+	  "percent"=>{"raw"=>0.7555555555555555, "weighted"=>0.6121212121212122}}, 
+	  "critical"=>["38"], 
+	  "all"=>["159", "160", "719", "165", "168", "169", "170", "171", "172", "179", "182", "183", "724", "184", "721", "722", "723"]}	
+	{% enduvhighlight ruby %}
 
-The scoring object is just a hash. While there a number of elements, the :answers element is the most important. If we only had the :answers (and the :answers\_other if used), all other information can be obtained or calculated.
+The scoring object is just a hash. While there a number of elements, the :answers element is the most important. If we only had the :answers, :other, and :text all other information can be obtained or calculated.
 
 Both the form and the object only rely on IDs. The :answers hash format is:
 
 * key = the question ID
 * value = an array of answer ID(s)
 
-	* if the type of answer is text, it will also contain the text response.
+	* if the type of answer is text, the text hash linked to the answer ID will contain the text response.
 
 This is all the information that is needed to score the assessment.
 
 The :all_answers array is just an extraction of the answer IDs from answers. If you know the answer ID, you can find everything except the text response. A use for this element is to create a searchable field in the record.
 
-The :failed element comes into play if you optionally choose a question to be *critical*. If the minimum score on a question that is marked as critical is not met, it could mean that the assessment was failed - regardless of the score. You could also use it to indicate what questions were failed.
+The :critical element comes into play if you optionally choose a question to be *critical*. If the minimum score on a question that is marked as critical is not met, it could mean that the assessment was failed - regardless of the score. You could also use it to indicate what questions were failed.
 
-The :answers\_other collects answers for any additional questions. The key is the answer ID and the value is the text value. This field will be present if an answer has the requires\_other boolean set and this answer is selected (radio and checkbox inputs only - javascript controlled).
+The :other collects answers for any additional questions. The key is the answer ID and the value is the text value. This field will be present if an answer has the requires\_other boolean set and this answer it is selected (radio, select and checkbox inputs only - javascript controlled).
 
-All the rest of the elements are just computed and can be recomputed. Putting them in the object allows you to choose what elements you want to save - but then why not save it all as a JSON or XML object.
+All the rest of the elements are just computed and can be recomputed. Putting them in the object allows you to choose what elements you want to save - but then why not save it all as a JSON object?
 
 ### Scoring Mechanism 
 
-Scoring is actually quite simple, but there are a few options that gives you quite a bit of flexibility. Back in school again, if you took a 10 question test, the teacher/instructor may have set that each question was worth 10 points and if you answered them all correctly you got 100 points. They may have also weighted the answers. You may have had a 7 question math type test where several of the questions were much more difficult or time consuming and those questions were weighted differently. You may have also received partial credit if you didn't answer the question correctly, but were close. These are all subjective methods of scoring, but Assessments can handle some of them.
+Scoring is actually quite simple, but there are a few options that gives you quite a bit of flexibility. Back in school again, if you took a 10 question test, the teacher/instructor may have set that each question was worth 10 points and if you answered them all correctly you got 100 points. They may have also weighted the answers. You may have had a 7 question math type test where several of the questions were much more difficult or time consuming and those questions were weighted differently. You may have also received partial credit if you didn't answer the question correctly, but were close. These are all subjective methods of scoring, but Assessments can handle most of them.
 
 Let's start simple and define a 5 question survey. Now I hate surveys, but for some reason customer satisfaction seems to be loved by marketeers. I usually refuse to take them. The 5 questions are all in the form of "Please rate your x of our y on a 5 point scale with 1 being the w and 5 being the z" (value in group_header for first question in group).
 
@@ -239,22 +227,126 @@ What if we changed them to checkboxes with a "Check all that applies" type quest
 
 While there are numerous options, they are not there for you to go wacko, but to use the approach you are most comfortable with.
 
-There is also an experimental text scoring scheme. The original design did not score text answers, but our experiment looks like it could be useful. Going back to the silly assessment, several of the text answers were scored. The scheme uses a regex to evaluate the content of the answer against a text_eval attribute.
+### Text Scoring
 
-The question "What do you do when you're not working (hobbies, etc.)?" was set up as a critical question with an evaluation that would pass the question, unless it contained the word golf, hunt or fish! The answer_eval field was set to `!(golf|fish|hunt)` and parsed into a regex that was then negated.  
+There is also an experimental text scoring scheme. The original design did not score text answers, but our experiment looks like it could be useful. Going back to the silly assessment, several of the text answers were scored. The scheme uses a regex to evaluate the content of the answer against a text\_eval attribute.
 
-The question on nouns and at least on adjectives is a little more complex in that it allows for partial credit option.  The answer eval for that question is `1::back&1::fox&-0.5::dog&1::(quick|brown|lazy)` The positive values are summed and a ratio computed that is multiplied with the answer value. Again it is parsed into chunks (& or ands) of regex and evaluated. If you said that dog was a noun, you would have 2.5/3 times the answer value - or a deduction for thinking that dogs was a noun in this sentence. While the regex scheme works, my challenge is to find a non-geek way of having it created for the user.
+There are two scoring methods used: one for numeric answers and one for text contains answers.
 
+In the simplest form, it is just a simple regex match.
+
+* Question: "What is the value of Pi rounded to 4 decimal places?". 
+	* Text eval is just "3.1416".
+* Question: "What are the verbs in the sentence \'The quick brown fox jumps the lazy dogs back.\'" 
+	* Text eval is just "jumps".
+
+You can have questions that have multiple answers.
+
+* Question: "What are the nouns in the sentence \'The quick brown fox jumps the lazy dogs back.\'" 
+	* Text eval is just "fox&back". The answer must contain "fox" AND "back"
+* Question: "Whas is at least one adjective in the sentence \'The quick brown fox jumps the lazy dogs back.\'" 
+	* Text eval is just "(quick|brown|lazy)". The answer must contain "quick" OR "brown" OR lazy.
+
+Getting more complicated.
+
+* Question: "What are the nouns and at least on adjective in the sentence \'The quick brown fox jumps the lazy dogs back.\'" 
+	* Text eval is just "fox&back&(quick|brown|lazy)". The answer must contain "fox" AND "back" AND "quick" OR "brown" OR "lazy".
+	* or knocking out wrong answers, text eval is "fox&back&(quick|brown|lazy)&!(jumps|the|dogs)"
+
+Text contains evaluations may contain an optional "partial credit" section. The section is delimited by a double colon ("::") and follows the same syntax except each AND section has a percentage assigned to the match using ">>" as the delimiter. The percentage can be plus or minus, so "dog>>-50" would be a 50% deduction. If the exact match is not found and there is a partial section, the sum of all the ANDs in the partial section is the score. The is sum normalized between 0 and the maximum value.
+
+* (quick|brown|lazy)&fox&back&!(the|jump|dog)::(quick|brown|lazy)>>20&fox>>40&back>>40&dog>>-50&the>>-75&jumps>>-75
+	* would give plus credit for each right answer and negative credit for answers that should not have been there. Partials only come into play if there is not an exact match.
+	
+Numeric answers have there own form of partial credit based on "deltas" or what range is considered a correct answer.
+
+* Question: "What is the value of Pi rounded to 4 decimal places?". 
+	* Text eval of "3.1416::.000025::.0001>>80::.001>>20". Would give 100% credit if the answer was between 3.141575 and 3.141625, 80 % credit if between 3.1415 and 3.1417, and so on.
+	
+There is a text eval helper form that uses javascript the to help build the regex.
+
+Text scoring also allows for multiple answer off of one basic questions.
+
+* Please identify the parts of speech in the sentence \'The quick brown fox jumps the lazy dogs back.\'
+	* Noun(s)
+	* Verb(s)
+	* At least on adjective
+	
+If there are multiple answers for a question, each answer is summed and compared against the maximum score possible for all answers.
+
+### Using the Engine
+
+While you can access the tables and methods using the module and classes (Take::Assessment.find(id)), the dummy application has two classes that are inherited.
+
+### Helper
+
+` ruby
+
+	module AssessorsHelper
+	  include Take::AssessHelper
+  
+	  # this makes the render_assessor method accessible by the application that use Take
+  
+	  # module AssessHelper
+	  #  def render_assessor(assmnt_hash,post=nil)
+	  #    AssessmentRenderer.new(assmnt_hash, post, self).render_assessment
+	  #  end
+	  # end
+  
+	  # The arguments for render_assessor are the assmnt_hash (see assessor_helper.rb), and an optional post object that has the answers from a pseudo session or previous assessment.
+	end
+
+`
+ 
+### Assess Model
+
+` ruby
+
+	class Assess < Take::Assess
+
+	  # The Assess model/class inherits Take::Assess, which adds some class methods to Take::Assessment, which it inherits.  The methods available are:
+	  # 
+	  # Two methods for getting an assessment hash
+	  #   The assessment hash is used to both display and score the assessment
+	  #   
+	  #   def publish(tojson = true)
+	  #     creates hash and optional converts it to JSON where it can be stored an Assessor model. Assessment is loaded
+	  #   
+	  #   def self.publish(aid)
+	  #     creates hash from assessment using ID. 
+	  #   
+	  # Getter and Setter methods for storing the post hash (returned from form) in a table Take::Stashes. This is mainly to maintain state in an assessor 
+	  # that has multiple assessment. This is used in lieu of sessions, which are limited to 4096 characters.
+	  # 
+	  #   def self.get_post(id, session)
+	  #     Arguments are the id of the assessor(or assessment) and the session, which only the session_id is used as the key to the Stashes table
+	  #     Result is the serialized post decoded to a hash.
+	  #     
+	  #   def self.set_post(id,post,session)
+	  #     Arguments are the id of the assessor(or assessment) 
+	  #     The post object from the params (or score object). This is serialized in JSON and stored 
+	  #     The session, which only the session_id is used as the key to the Stashes table
+	  # 
+	  #   
+	  # The scoring method
+	  # 
+	  #   def self.score_assessment(assmnt_hash,post)
+	  #     Arguments are the published assmnt_hash, and params[:post] from the form
+
+
+	end
+	
+
+`
 ### Status
 
 I have no idea on how to build a plugin or engine. I also don't have *any* testing - never learned how to use it.
 
-Being a plugin, assessments must be tied to something, an application, survey, evaluation. There are fields in the table that allow that connection to be made it different ways. 
+Being a plugin, assessments must be tied to something, an application, survey, evaluation. There are fields in the table that allow that connection to be made to it different ways. 
 
 
 ### To Do's
 
-* What attributes in assessments, questions, and answers need to trigger (dirty?) a recompute of max_score and max_weighted.
 * There are configuration options (control state, can not edit is state is x|Y|Z)
 * Do I need an is_admin? check?
 * How do I deal with status to control state?

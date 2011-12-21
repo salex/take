@@ -2,7 +2,7 @@ module Take
   class Assess < Assessment
 
     def self.get_post(id, session)
-      stash = Take::Stash.get(session)
+      stash = Stash.get(session)
       @post = stash.get_post(id) 
     end
     
