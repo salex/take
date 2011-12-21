@@ -15,7 +15,7 @@ Assessments can be used on many different types of applications:
 
 Just about anything where you want to capture scores on one or more **questions** that have one or more possible **answers** can be considered an assessment. The basic assessment models are:
 
-
+``` ruby
 	class Assessment < ActiveRecord::Base
 		has_many :questions, :order => "sequence", :dependent => :destroy
 	end
@@ -29,7 +29,7 @@ Just about anything where you want to capture scores on one or more **questions*
 	class Answer < ActiveRecord::Base
 		belongs_to :question
 	end
-
+```
 
 	
 These are basically three CRUD tables build with a modified scaffold generator. The main tasks of what I consider the Engine part are:
@@ -171,7 +171,7 @@ When this assessment is posted, a *scoring object* is created; you can use all o
 The scoring object is at the bottom of the screen (post.inspect) and the top part is one way to display the results in a compressed, but readable display. Let's
 look a little closer at the scoring object.
 
-	{% uvhighlight ruby %}
+``` ruby
 
 	score_object => {"answer"=>{"35"=>["159"], "36"=>["160", "719"], "37"=>["165"], "38"=>["168"], "39"=>["169"], 
 	  "40"=>["170", "171", "172"], "42"=>["179"], "43"=>["182"], "44"=>["183", "724"], "45"=>["184"], "156"=>["721", "722", "723"]},        
@@ -184,7 +184,7 @@ look a little closer at the scoring object.
 	  "percent"=>{"raw"=>0.7555555555555555, "weighted"=>0.6121212121212122}}, 
 	  "critical"=>["38"], 
 	  "all"=>["159", "160", "719", "165", "168", "169", "170", "171", "172", "179", "182", "183", "724", "184", "721", "722", "723"]}	
-	{% enduvhighlight ruby %}
+```
 
 The scoring object is just a hash. While there a number of elements, the :answers element is the most important. If we only had the :answers, :other, and :text all other information can be obtained or calculated.
 
@@ -280,7 +280,7 @@ While you can access the tables and methods using the module and classes (Take::
 
 ### Helper
 
-` ruby
+``` ruby
 
 	module AssessorsHelper
 	  include Take::AssessHelper
@@ -296,11 +296,11 @@ While you can access the tables and methods using the module and classes (Take::
 	  # The arguments for render_assessor are the assmnt_hash (see assessor_helper.rb), and an optional post object that has the answers from a pseudo session or previous assessment.
 	end
 
-`
+```
  
 ### Assess Model
 
-` ruby
+``` ruby
 
 	class Assess < Take::Assess
 
@@ -337,7 +337,8 @@ While you can access the tables and methods using the module and classes (Take::
 	end
 	
 
-`
+```
+
 ### Status
 
 I have no idea on how to build a plugin or engine. I also don't have *any* testing - never learned how to use it.
