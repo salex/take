@@ -56,7 +56,17 @@ module Take
       end
   
       def exact_score(answer,value)
-        ands =  and_splits(@match)
+        ors = @match.split("||")
+        ok = false
+        ors.each do |elem|
+          is_there = match_exact(elem,answer)
+          ok = ok || is_there
+        end
+        return ok ? value : 0.0
+      end
+      
+      def match_exact(elem,answer)
+        ands =  and_splits(elem)
         #puts "aaaaaaaaaaa #{ands.inspect}"
         ok = true
         ands.each do |elem|
@@ -74,10 +84,9 @@ module Take
             ok = ok && elem_ok
           end
         end
-        #puts "e #{ok ? value : 0.0}"
-        return ok ? value : 0.0
-      end
-  
+        return ok
+      end  
+      
       def partial_score(answer,value)
         result = 0.0
         return result if @partial.nil?
@@ -107,6 +116,7 @@ module Take
         #puts "p #{result}"
         return result
       end  
+      
     end
   end
 end
