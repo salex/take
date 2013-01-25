@@ -1,5 +1,6 @@
 module Take
-  class TakeController < ApplicationController
+  class TakeController < BaseController
+    layout "take/application"
     
     def about
     end

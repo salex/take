@@ -4,6 +4,8 @@ module Take
     after_save :updateMax
     after_destroy :updateMax
     validates_numericality_of :value
+    
+    attr_accessible :question_id, :sequence, :short_name, :answer_text, :value, :requires_other, :other_question, :text_eval, :key
 
     private
 

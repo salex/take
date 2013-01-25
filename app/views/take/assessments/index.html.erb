@@ -25,7 +25,7 @@
       <tr <%=raw alt ? "class=\"alt\"" : ""%>>
 
         <td><%= assessment.name %></td>
-        <td><%=raw truncateText(assessment.description,25,"middle") %></td>
+        <td><%= raw truncateText(assessment.description,25,"middle") %></td>
         <td><%= assessment.status %></td>
         <td><%= assessment.category %></td>
         <td><%= assessment.max_raw %></td>
@@ -38,5 +38,5 @@
     </tr>
   <% end %>
   </table>
-  <%# = will_paginate @assessments %> 
+  <!-- will_paginate @assessments   -->
 </fieldset>

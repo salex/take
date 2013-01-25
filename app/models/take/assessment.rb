@@ -1,7 +1,8 @@
 module Take
   class Assessment < ActiveRecord::Base
     has_many :questions, :order => "sequence", :dependent => :destroy
-  
+    attr_accessible  :default_answer_tag, :category,  :created_at, :description, :default_display, :id, :instructions, :max_raw, :max_weighted, :name, :status, :updated_at, :key
+
     def self.computeMax(id)
       if id.nil?
         return false
@@ -41,35 +42,34 @@ module Take
         end
       end
       assessment.max_raw = maxRaw
-      assessment.max_weighted = maxWeighted
+      assessment.max_weighted = maxWeighted 
       assessment.save
       return true
     end
     
+    # DEPRACATED, wrong approach anyhow!!!
+    # def publish(tojson = true)
+    #   self[:questions] = []
+    #   for question in self.questions
+    #     question[:answers] = []
+    #     for answer in question.answers
+    #       question[:answers] << answer
+    #     end
+    #     self[:questions] << question
+    #   end
+    #   return  tojson ? self.to_json : self
+    # end
+    
     def publish(tojson = true)
-      self[:questions] = []
-      for question in self.questions
-        question[:answers] = []
-        for answer in question.answers
-          question[:answers] << answer
-        end
-        self[:questions] << question
-      end
-      return  tojson ? self.to_json : self
+      json = self.to_json(:include => {:questions => {:include => :answers}})
+      return tojson ? json : Take.safe_json_decode(json)
     end
-    
+  
     def self.publish(aid)
-      assessment = Assessment.find(aid)
-      assessment[:questions] = []
-      for question in assessment.questions
-        question[:answers] = []
-        for answer in question.answers
-          question[:answers] << answer
-        end
-        assessment[:questions] << question
-      end
-      return assessment
+      assmnt = Assessment.find(aid)
+      return assmnt.publish(false)
     end
-    
   end
+  
+  
 end

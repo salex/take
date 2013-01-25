@@ -20,13 +20,13 @@
     
     <%# @question.answers.each do |answer| %>
       <% alt = !alt %>
-
+      <% new_ans = builder.object[:id].nil? ? "New " : ""%>
     <tr <%=raw alt ? "class=\"alt\"" : ""%>>
         <td>
           <%= builder.text_field :sequence ,:size => 2 %>
         </td>
         <td>
-          <span class="index-label">Answer:</span> <%= builder.text_field :answer_text, :size => 50 %> <br />
+          <span class="index-label"><%= new_ans %>Answer:</span> <%= builder.text_field :answer_text, :size => 50 %> <br />
           <span class="index-label">Short Name:</span> <%= builder.text_field :short_name, :size => 20 %>  
           
         </td>

@@ -8,8 +8,25 @@ module Take
     after_destroy :updateMax
     validates_numericality_of :min_critical_value, :if => :critical, :message => "must be a number if critical checkbox checked"
     accepts_nested_attributes_for :answers, :reject_if => lambda { |a| a[:answer_text].blank? }, :allow_destroy => true
+    attr_accessible :assessment_id, :sequence, :short_name,  :question_text, :instructions, :answer_tag, :type_display, :group_header, :weight, :critical, :min_critical_value, :score_method, :key, :answers_attributes
 
-
+    def clone
+      answers = self.answers
+      newques = self.dup
+      newques.assessment_id = self.assessment_id
+      newques.question_text = "Cloned #{newques.question_text}"
+      newques.save
+      newquesid = newques.id
+      for answer in answers
+        newans = answer.dup
+        newans.question_id = newquesid
+        newans.save
+      end
+      return newques
+    end
+ 
+ 
+ 
     private
 
     def set_defaults
@@ -52,5 +69,7 @@ module Take
        }
       return dirty
     end
+    
+      
   end
 end

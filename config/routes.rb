@@ -18,9 +18,14 @@ Take::Engine.routes.draw do
     resources :answers, :only => [ :new, :create] 
     member do
       get :edit_answers
+      get :clone
     end
   end
   resources :answers, :only => [:show, :edit, :update, :destroy]
+
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+  get 'profile', to: 'users#edit', as: 'profile'
 
   root :to => "take#about"
 end

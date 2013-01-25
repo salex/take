@@ -29,6 +29,8 @@
         <%= link_to 'Show', question_path(question), :class => "show-button" %>
         <%= link_to 'Edit', edit_question_path(question), :class => "edit-button"  %>
         <%= link_to 'Destroy', question_path(question), :confirm => 'Are you sure?', :method => :delete , :class => "destroy-button"  %>
+        <%= link_to 'Clone', clone_question_path(question) %>
+        
       </td>
     </tr>
   <% end %>

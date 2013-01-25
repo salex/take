@@ -1,17 +1,19 @@
 module Take
-  class QuestionsController < ApplicationController
+  class QuestionsController < BaseController
     before_filter :get_question, :except => [:index, :new, :create, :update, :edit]
+    layout "take/application"
+    before_filter :authorize_main
     
     # GET /questions
     # GET /questions.json
-    def index
-      @questions = Question.all
-  
-      respond_to do |format|
-        format.html # index.html.erb
-        format.json { render json: @questions }
-      end
-    end
+    # def index
+    #   @questions = Question.all
+    #   
+    #   respond_to do |format|
+    #     format.html # index.html.erb
+    #     format.json { render json: @questions }
+    #   end
+    # end
   
     # GET /questions/1
     # GET /questions/1.json
@@ -96,11 +98,18 @@ module Take
       @question = Question.find(params[:id])
       max = @question.answers.maximum(:sequence) 
       seq = max.nil? ? 0  : max 
-      3.times do
+      cnt = @question.answers.count > 0 ? 2 : 5
+      cnt.times do
         seq += 1
         answer = @question.answers.build({:sequence => seq})
       end
       #render :text => params.inspect, :layout => true
+    end
+    
+    def clone
+      clone_question = Question.find(params[:id])
+      @question = clone_question.clone
+      render  template: "edit"
     end
     
     

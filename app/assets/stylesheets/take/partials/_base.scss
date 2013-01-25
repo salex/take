@@ -69,7 +69,10 @@ li {margin: 0 1em;}
     text-align: center; 
 }
 
-#navbar { background: green; padding: 2px; }
+#navbar { background: $theme-color-5; padding: 2px; }
+#navbar a {color:white; text-decoration:none}
+.alert {color:red; background-color:pink; border:solid 1px red; padding:4px}
+.notice {color:green;width:100%; background-color:LightGreen; border:solid 1px green; padding:4px}
 
 
 #content { padding: 1em; background: transparent;}

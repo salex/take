@@ -1,7 +1,10 @@
 module Take
-  class AnswersController < ApplicationController
+  class AnswersController < BaseController
     # GET /answers
     # GET /answers.json
+    layout "take/application"
+    before_filter :authorize_main
+    
     def index
       @answers = Answer.all
   

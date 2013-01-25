@@ -15,7 +15,7 @@ module Take
     end
 
   end
-  def hello(who)
+  def self.hello(who)
     return "Hello #{who}!"
   end
   

@@ -11,6 +11,39 @@ module Take
       stash.set_post(id,post)
     end
     
+    def self.get(session)
+      stash = Stash.get(session)
+    end
+    
+    def self.clear(session)
+      Stash.clear(session)
+    end
+    
+    def self.clone_assessment(id)
+      assessment = self.find(id)
+      return nil if assessment.nil?
+      cloned_assessment = assessment.dup
+      cloned_assessment.status = 'new'
+      cloned_assessment.key = ''
+      cloned_assessment.save
+      newassid = cloned_assessment.id
+      for question in assessment.questions
+        answers = question.answers
+        newques = question.dup
+        newques.assessment_id = newassid
+        newques.save
+        newquesid = newques.id
+        for answer in answers
+          newans = answer.dup
+          newans.question_id = newquesid
+          newans.save
+        end
+      end
+      return cloned_assessment
+    end
+
+    
+    
     def self.score_assessment(assmnt_hash,post)
       totalScore = 0
       totalScoreWeighted = 0
@@ -28,7 +61,7 @@ module Take
           txt_idx = 0
           question["answers"].each do |answer|
             aid = answer["id"].to_s
-            if !answered.index(aid).nil?
+            if !answered.nil? && !answered.index(aid).nil?
               case score_method
               when "textcontains"
                 answer = question["answers"][a_ids.index(answered[txt_idx])]
@@ -69,25 +102,29 @@ module Take
             #value = self.score_textNumeric(answer["value"],answer["text_eval"],post["text"][answered[0]])
             #ne = Take::TextEval::Numeric.new(answer["text_eval"])
             #value = ne.score(post["text"][answered[0]],answer["value"])
+            
           else
             value = max
           end
           #if critical do something
           if question["critical"]
             if value < question["min_critical_value"]
-              post[:critical]  = [] unless post[:critical]
-              post[:critical] << qid
+              post['critical']  = [] unless post['critical']
+              post['critical'] << qid
             end
           end
-          
+        else
+          value = 0  
         end
-        totalScore += value
+        #logger.info "VALUE #{value} Total #{totalScore} Score Method #{score_method} Max #{max}"
+        totalScore +=  value
         totalScoreWeighted += (value * question["weight"])
-        post["scores"][qid] = {raw: value, weighted: (value * question["weight"])}
+        post["scores"][qid] = {'raw'  => value, 'weighted'  => (value * question["weight"])}
         #puts "Totals #{totalScore} #{totalScoreWeighted}"
       end
-      post["scores"]["total"] = {raw: totalScore, weighted: totalScoreWeighted}
-      post["scores"]["percent"] = {raw: (totalScore / assmnt_hash["max_raw"]) , weighted: (totalScoreWeighted / assmnt_hash["max_weighted"])}
+      post["scores"]["total"] = {'raw'  => totalScore, 'weighted'  => totalScoreWeighted}
+      post["scores"]["percent"] = {'raw'  => ( assmnt_hash["max_raw"] == 0.0 ? 0.0 : totalScore / assmnt_hash["max_raw"]) , 
+        'weighted'  => (assmnt_hash["max_weighted"] == 0.0 ? 0.0 : totalScoreWeighted / assmnt_hash["max_weighted"])}
       all = []
       post["answer"].each do |key,value|
         all.concat(value)

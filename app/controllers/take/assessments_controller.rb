@@ -1,8 +1,9 @@
 module Take
-  class AssessmentsController < ApplicationController
+  class AssessmentsController < BaseController
     # GET /assessments
     # GET /assessments.json
-    
+    layout "take/application"
+    before_filter :authorize_main
     def index
       @assessments = Assessment.all
   
@@ -92,12 +93,15 @@ module Take
     
     def post
       @assmnt_hash = Assessment.publish(params[:id])
+      @in = params[:post]
       results = Assess.score_assessment(@assmnt_hash,params[:post])
       Assess.set_post(params[:id],params[:post],session)
-      render :text => "Testing: post_obj =>  #{results.inspect}", :layout => true
+      render :text => "Testing: post_obj =>  #{results.inspect} \n The original post #{@in.inspect}", :layout => true
     end
     
+    
     private
+    
     
     def reset_stash
       stash = Stash.get(session)
