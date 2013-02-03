@@ -10,19 +10,57 @@ module Take
     accepts_nested_attributes_for :answers, :reject_if => lambda { |a| a[:answer_text].blank? }, :allow_destroy => true
     attr_accessible :assessment_id, :sequence, :short_name,  :question_text, :instructions, :answer_tag, :type_display, :group_header, :weight, :critical, :min_critical_value, :score_method, :key, :answers_attributes
 
+    def ans_hos_others
+      #used by renderor to not start data-behavior unless one at least on of the anwers requires another response
+      self.answers.where(:requires_other => true).count > 0
+    end
+    
     def clone
+      max = self.assessment.questions.maximum(:sequence) 
+      new_sequence = max.nil? ? 1  : max + 1
+      
       answers = self.answers
-      newques = self.dup
-      newques.assessment_id = self.assessment_id
-      newques.question_text = "Cloned #{newques.question_text}"
-      newques.save
-      newquesid = newques.id
+      new_ques = self.dup
+      new_ques.assessment_id = self.assessment_id
+      new_ques.question_text = "Cloned #{new_ques.question_text}"
+      new_ques.sequence = new_sequence
+      new_ques.save
+      new_quesid = new_ques.id
       for answer in answers
-        newans = answer.dup
-        newans.question_id = newquesid
-        newans.save
+        new_ans = answer.dup
+        new_ans.question_id = new_quesid
+        new_ans.save
       end
-      return newques
+      return new_ques
+    end
+    def self.console_clone(aid,qid,ques)
+      # This is sort of an import. If you have a bunch of 1..5 radio type question/answers
+      # You can create the first question/answers and then send the id's of that assessment/question
+      # and a string array of the questions you want to create.
+      return nil if ques.class != Array
+      assmnt = Assessment.find(aid)
+      return nil if assmnt.nil?
+      question = assmnt.questions.find(qid)
+      return nil if question.nil?
+      max = assmnt.questions.maximum(:sequence) 
+      new_sequence = max.nil? ? 1  : max + 1
+      ques.each do |q|
+        answers = question.answers
+        new_ques = question.dup
+        new_ques.assessment_id = question.assessment_id
+        new_ques.question_text = q.strip
+        new_ques.short_name = "" # not dealing with sort_names here, yet
+        new_ques.sequence = new_sequence
+        new_ques.save
+        new_quesid = new_ques.id
+        for answer in answers
+          new_ans = answer.dup
+          new_ans.question_id = new_quesid
+          new_ans.save
+        end
+        new_sequence += 1
+      end
+      return question
     end
  
  

@@ -89,7 +89,7 @@ module Take
       @question.destroy
   
       respond_to do |format|
-        format.html { redirect_to questions_url }
+        format.html { redirect_to @question.assessment }
         format.json { head :ok }
       end
     end
@@ -109,7 +109,7 @@ module Take
     def clone
       clone_question = Question.find(params[:id])
       @question = clone_question.clone
-      render  template: "edit"
+      redirect_to  edit_question_url(@question)
     end
     
     

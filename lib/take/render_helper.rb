@@ -34,6 +34,8 @@ module Take
       @assmnt["questions"].each do |question|
         if question["type_display"].downcase != "none"
           result << h_make_group_header(question["group_header"]) unless question["group_header"].blank?
+          # TODO atempt , set requires_other at question level if any answer requires other
+          question["answers"].map{|r| question["requires_other"] = r["requires_other"] if r["requires_other"]  }
           if question["type_display"].downcase == "inline"
             result << h_make_inline_question(question)
           else
@@ -196,21 +198,29 @@ module Take
         <option value="#{answer["id"]}" #{sel}>#{answer["answer_text"]}</option>
         HE
       end
+      data_behavior = question["requires_other"] ? "toggle_other_sel" : ""
       mult = question["answer_tag"].downcase == "select" ? false : true
       required = question["score_method"].downcase == "none" ? "" : "required-one"
       
       result = select_tag("post[answer][#{question["id"]}][]", options.html_safe, :id => "qa_#{question["id"]}", 
-      :class => required, :include_blank => !mult, :multiple => mult, :"data-behavior" => "toggle_other_sel" )
+      :class => required, :include_blank => !mult, :multiple => mult, :"data-behavior" => data_behavior )
       
     end
     
     def h_make_input_tag(question,answer)
       result = ""
       text, exists, other = h_getAnswerData(answer["id"].to_s)
+      #Rails.logger.debug "MAKE RADO button  #{question["requires_other"]}"
+      
       case question["answer_tag"].downcase
       when "radio"
         required = question["score_method"].downcase == "none" ? "" : "required-one"
-        behavior =  "toggle_other" 
+        # behavior =  "toggle_other" 
+        #TODO Make temp obj in question ans_requires_other if any of the answers for a questiion
+        # as a requires_other tag. set behavior but this flag
+        #behavior = answer["requires_other"] ? "toggle_other" : "none"
+        behavior = question["requires_other"] ? "toggle_other" : ""
+        
         result = radio_button_tag("post[answer][#{question["id"]}][]",answer["id"].to_s, exists,
          :class => required, :"data-behavior" => behavior , :id => "qa_#{question["id"]}_#{answer["id"]}")
       when "checkbox"

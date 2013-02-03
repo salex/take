@@ -51,7 +51,7 @@ module Take
       assmnt_hash["questions"].each do |question|
         sum = 0
         max = 0
-        #puts question["question_text"]
+        #logger.debug "QUESTION" + question.inspect
         qid = question["id"].to_s
         answered = post["answer"][qid]
         a_ids = question["answers"].collect{|i| i["id"].to_s}        
@@ -82,11 +82,13 @@ module Take
               else
                 sum += answer["value"]
                 max = answer["value"] if answer["value"] > max
-                #puts "#{sum} #{max}"
+                #logger.debug "SUMMAX#{sum} #{max}"
               end
             end
             txt_idx += 1
           end
+          #logger.debug "SUMMAX#{sum} #{max}"
+          
           case score_method
           when "sum"
             value = sum

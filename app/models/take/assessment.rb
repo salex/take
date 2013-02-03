@@ -61,8 +61,13 @@ module Take
     # end
     
     def publish(tojson = true)
-      json = self.to_json(:include => {:questions => {:include => :answers}})
-      return tojson ? json : Take.safe_json_decode(json)
+      #double parse to get ride of dates from hash
+      hash = self.as_json(:except => [:created_at, :updated_at ], 
+        :include => {:questions => {:except => [:created_at, :updated_at ],
+        :include => {:answers => {:except => [:created_at, :updated_at ]}}}})
+      json = hash.to_json
+      hash = Take.safe_json_decode(json)
+      return tojson ? json : hash
     end
   
     def self.publish(aid)
