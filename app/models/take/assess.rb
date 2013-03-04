@@ -50,7 +50,7 @@ module Take
       post["scores"] = {}
       assmnt_hash["questions"].each do |question|
         sum = 0
-        max = 0
+        max = -1
         #logger.debug "QUESTION" + question.inspect
         qid = question["id"].to_s
         answered = post["answer"][qid]

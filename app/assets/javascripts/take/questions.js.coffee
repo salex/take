@@ -4,24 +4,24 @@
 
 $(document).ready ->
 
-  $('[data-behavior="edit_contains"]').live("click",  -> 
+  $(document).on("click", '[data-behavior="edit_contains"]', -> 
     $("#"+this.id+"_div").show())
 
-  $('[data-behavior="edit_numeric"]').live("click", -> 
+  $(document).on("click",'[data-behavior="edit_numeric"]', -> 
     $("#"+this.id+"_div").show())
 
-  $('[data-behavior="contains_cancel"]').live("click", ->
+  $(document).on("click", '[data-behavior="contains_cancel"]',->
     seq = get_seq(this.id)
     $("#eval_"+seq+"_div").hide())
 
-  $('[data-behavior="numeric_cancel"]').live("click", ->
+  $(document).on("click", '[data-behavior="numeric_cancel"]', ->
     seq = get_seq(this.id)
     $("#eval_"+seq+"_div").hide())
 
-  $('[data-behavior="contains_update"]').live("click", ->
+  $(document).on("click",'[data-behavior="contains_update"]', ->
     update_contains(this.id))
       
-  $('[data-behavior="numeric_update"]').live("click", ->
+  $(document).on("click",'[data-behavior="numeric_update"]', ->
     update_numeric(this.id))
 
   update_contains = (id) ->
