@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["salex@mac.com"]
   s.homepage    = "http://iwishicouldwrite.com"
   s.summary     = "take-#{s.version}"
-  s.description = "TODO: Description of Take."
+  s.description = "A Rails mountable engine to provides a assessments/questions/answers structure. For use in assessments, tests, surveys, etc."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
