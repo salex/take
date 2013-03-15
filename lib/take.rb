@@ -3,7 +3,6 @@ require "take/render_helper"
 require "take/text_eval"
 
 module Take
-  VERSION = "0.2.0"
   class Post
     attr_accessor :answer, :all, :text, :other, :scores, :all
 
